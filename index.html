@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A comprehensive learning platform for software engineers to strengthen their foundations and grow their development skills.">
+    <meta name="keywords" content="software development, learning platform, web development, coding tutorials">
+    <meta name="author" content="Md Asif">
+    <title>Software Development Learning Platform | Learn & Grow</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for dev icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Particle Canvas Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Floating Dev Icons -->
+    <div class="floating-icons" id="floatingIcons"></div>
+    <!-- Dynamic Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="glow-orb glow-orb-1"></div>
+        <div class="glow-orb glow-orb-2"></div>
+        <div class="glow-orb glow-orb-3"></div>
+
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-rocket"></i>
+                    <span>Train Like a Pro Developer</span>
+                </div>
+                <h1 class="hero-title">
+                    Build. Learn. Deploy.<br>
+                    <span class="gradient-text glow-text">Master Software Development</span>
+                </h1>
+                <p class="hero-description">
+                    A comprehensive learning platform for aspiring software engineers.
+                    Master HTML, CSS, JavaScript, React, Python, and modern web development practices
+                    through <span class="highlight-text">structured modules</span> with hands-on projects.
+                </p>
+
+                <!-- Feature Pills -->
+                <div class="feature-pills">
+                    <span class="pill"><i class="fas fa-code"></i> 13 Modules</span>
+                    <span class="pill"><i class="fas fa-project-diagram"></i> Real Projects</span>
+                    <span class="pill"><i class="fas fa-cloud"></i> Cloud Ready</span>
+                    <span class="pill"><i class="fas fa-infinity"></i> Free Forever</span>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="modules.html" class="btn btn-primary glow-btn">
+                        <i class="fas fa-terminal"></i> Start Learning
+                    </a>
+                    <a href="#journey" class="btn btn-secondary">
+                        <i class="fas fa-map-marked-alt"></i> View Roadmap
+                    </a>
+                </div>
+
+                <!-- GitHub-style Stats -->
+                <div class="github-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-book"></i>
+                        <span class="stat-count">13</span>
+                        <span class="stat-text">Modules</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-code-branch"></i>
+                        <span class="stat-count">50+</span>
+                        <span class="stat-text">Exercises</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span class="stat-count">100+</span>
+                        <span class="stat-text">Examples</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <!-- Interactive Code Terminal -->
+                <div class="code-terminal glow-card">
+                    <div class="terminal-header">
+                        <div class="window-dots">
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                        </div>
+                        <span class="terminal-title">
+                            <i class="fas fa-terminal"></i> developer.js
+                        </span>
+                        <div class="terminal-actions">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command">npm run learn</span>
+                        </div>
+                        <pre class="code-output"><code><span class="code-comment">// Your Journey Starts Here</span>
+
+<span class="code-keyword">class</span> <span class="code-class">Developer</span> {
+  <span class="code-method">constructor</span>(<span class="code-var">name</span>) {
+    <span class="code-keyword">this</span>.<span class="code-property">name</span> = <span class="code-var">name</span>;
+    <span class="code-keyword">this</span>.<span class="code-property">skills</span> = [];
+    <span class="code-keyword">this</span>.<span class="code-property">level</span> = <span class="code-string">'beginner'</span>;
+  }
+  
+  <span class="code-method">learn</span>(<span class="code-var">module</span>) {
+    <span class="code-keyword">this</span>.<span class="code-property">skills</span>.<span class="code-method">push</span>(<span class="code-var">module</span>);
+    <span class="code-keyword">return</span> <span class="code-string">'Knowledge ++'</span>;
+  }
+  
+  <span class="code-method">build</span>() {
+    <span class="code-keyword">return</span> <span class="code-string">'🚀 Amazing Project!'</span>;
+  }
+}
+
+<span class="code-keyword">const</span> <span class="code-var">you</span> = <span class="code-keyword">new</span> <span class="code-class">Developer</span>(<span class="code-string">'Your Name'</span>);
+<span class="code-var">you</span>.<span class="code-method">learn</span>(<span class="code-string">'React'</span>);
+<span class="code-var">console</span>.<span class="code-method">log</span>(<span class="code-var">you</span>.<span class="code-method">build</span>());
+
+<span class="code-comment">// Output: 🚀 Amazing Project!</span></code></pre>
+                        <div class="terminal-cursor"></div>
+                    </div>
+                </div>
+
+                <!-- Tech Stack Badges -->
+                <div class="tech-stack">
+                    <div class="tech-badge"><i class="fab fa-html5"></i> HTML5</div>
+                    <div class="tech-badge"><i class="fab fa-css3-alt"></i> CSS3</div>
+                    <div class="tech-badge"><i class="fab fa-js"></i> JavaScript</div>
+                    <div class="tech-badge"><i class="fab fa-react"></i> React</div>
+                    <div class="tech-badge"><i class="fab fa-python"></i> Python</div>
+                    <div class="tech-badge"><i class="fab fa-aws"></i> AWS</div>
+                    <div class="tech-badge"><i class="fab fa-google"></i> GCP</div>
+                    <div class="tech-badge"><i class="fas fa-cloud"></i> Cloudflare</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Modules Section -->
+    <section class="modules-preview" id="journey">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title glow-text">
+                    <i class="fas fa-book-open"></i> Course Modules
+                </h2>
+                <p class="section-subtitle">Comprehensive modules covering essential software development skills</p>
+            </div>
+
+            <div class="modules-grid">
+                <!-- Module 1 -->
+                <div class="module-card glow-card">
+                    <div class="module-header">
+                        <span class="module-number">Module 01</span>
+                        <i class="fas fa-tools module-icon"></i>
+                    </div>
+                    <h3>Environment Setup & Developer Tools</h3>
+                    <p>Master the essential tools every developer needs. Learn VS Code, Git, GitHub, and deploy your
+                        first site with Cloudflare Pages.</p>
+                    <div class="module-tech">
+                        <span class="tech-tag"><i class="fab fa-github"></i> GitHub</span>
+                        <span class="tech-tag"><i class="fas fa-cloud"></i> Cloudflare</span>
+                        <span class="tech-tag"><i class="fab fa-git-alt"></i> Git</span>
+                    </div>
+                    <a href="modules.html#module-01" class="module-link">
+                        Explore Module <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="module-card glow-card">
+                    <div class="module-header">
+                        <span class="module-number">Module 02</span>
+                        <i class="fab fa-html5 module-icon"></i>
+                    </div>
+                    <h3>HTML & CSS Fundamentals</h3>
+                    <p>Build the foundation of web interfaces. Learn semantic HTML5, responsive CSS, accessibility, and
+                        modern frameworks like Bootstrap and Tailwind.</p>
+                    <div class="module-tech">
+                        <span class="tech-tag"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                        <span class="tech-tag"><i class="fas fa-mobile-alt"></i> Responsive</span>
+                    </div>
+                    <a href="modules.html#module-02" class="module-link">
+                        Explore Module <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="module-card glow-card">
+                    <div class="module-header">
+                        <span class="module-number">Module 03</span>
+                        <i class="fab fa-js module-icon"></i>
+                    </div>
+                    <h3>JavaScript Essentials</h3>
+                    <p>Create interactive web experiences. Master syntax, DOM manipulation, event handling, Fetch API,
+                        and modern JavaScript features.</p>
+                    <div class="module-tech">
+                        <span class="tech-tag"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="tech-tag"><i class="fas fa-code"></i> ES6+</span>
+                        <span class="tech-tag"><i class="fas fa-browser"></i> DOM</span>
+                    </div>
+                    <a href="modules.html#module-03" class="module-link">
+                        Explore Module <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Module 4 -->
+                <div class="module-card glow-card">
+                    <div class="module-header">
+                        <span class="module-number">Module 04</span>
+                        <i class="fab fa-react module-icon"></i>
+                    </div>
+                    <h3>React.js Development</h3>
+                    <p>Build modern, scalable front-end applications. Learn components, hooks, state management, and API
+                        integration with React.</p>
+                    <div class="module-tech">
+                        <span class="tech-tag"><i class="fab fa-react"></i> React</span>
+                        <span class="tech-tag"><i class="fas fa-project-diagram"></i> Hooks</span>
+                        <span class="tech-tag"><i class="fas fa-layer-group"></i> Components</span>
+                    </div>
+                    <a href="modules.html#module-04" class="module-link">
+                        Explore Module <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Module 5 -->
+                <div class="module-card glow-card">
+                    <div class="module-header">
+                        <span class="module-number">Module 05</span>
+                        <i class="fab fa-python module-icon"></i>
+                    </div>
+                    <h3>Python Programming Fundamentals</h3>
+                    <p>Master Python from scratch. Learn syntax, data structures, file handling, error management, and
+                        real-world Python applications.</p>
+                    <div class="module-tech">
+                        <span class="tech-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="tech-tag"><i class="fas fa-file-code"></i> File I/O</span>
+                        <span class="tech-tag"><i class="fas fa-bug"></i> Debugging</span>
+                    </div>
+                    <a href="modules.html#module-05" class="module-link">
+                        Explore Module <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Module 6 -->
+                <div class="module-card glow-card">
+                    <div class="module-header">
+                        <span class="module-number">Module 06</span>
+                        <i class="fas fa-play-circle module-icon"></i>
+                    </div>
+                    <h3>Animation using Python (Manim)</h3>
+                    <p>Create stunning programmatic animations. Learn Manim to build educational content and algorithm
+                        visualizations like 3Blue1Brown.</p>
+                    <div class="module-tech">
+                        <span class="tech-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="tech-tag"><i class="fas fa-video"></i> Manim</span>
+                        <span class="tech-tag"><i class="fas fa-palette"></i> Animation</span>
+                    </div>
+                    <a href="modules.html#module-06" class="module-link">
+                        Explore Module <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- View All Modules CTA -->
+            <div class="modules-cta">
+                <a href="modules.html" class="btn btn-primary btn-large">
+                    <i class="fas fa-th-large"></i> View All Modules
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase Projects Section -->
+    <section class="showcase-projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title glow-text">
+                    <i class="fas fa-rocket"></i> Real-World Projects
+                </h2>
+                <p class="section-subtitle">You'll explore these projects during the course</p>
+            </div>
+
+            <div class="projects-showcase">
+                <!-- Project 1: AI Chat Integration -->
+                <div class="project-showcase glow-card">
+                    <div class="project-visual">
+                        <div class="project-demo chat-demo">
+                            <div class="demo-header">
+                                <i class="fas fa-robot"></i>
+                                <span>AI Chatbot</span>
+                            </div>
+                            <div class="chat-messages" id="chatDemo">
+                                <div class="chat-message user-message">
+                                    <div class="message-avatar"><i class="fas fa-user"></i></div>
+                                    <div class="message-content">Hello! What can you help me with?</div>
+                                </div>
+                                <div class="chat-message bot-message">
+                                    <div class="message-avatar"><i class="fas fa-robot"></i></div>
+                                    <div class="message-content typing">
+                                        <span class="typing-indicator">
+                                            <span></span><span></span><span></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-badge">
+                            <i class="fas fa-robot"></i>
+                            <span>Project 01</span>
+                        </div>
+                        <h3>AI Chat Integration</h3>
+                        <p>Build an intelligent chatbot using OpenAI, Google Gemini, or Anthropic Claude. Learn to
+                            integrate Large Language Models (LLMs) into your web applications with real-time
+                            conversations.</p>
+                        <div class="project-code">
+                            <div class="code-snippet">
+                                <pre><code><span class="code-comment">// AI Chatbot Integration</span>
+<span class="code-keyword">const</span> <span class="code-var">chat</span> = <span class="code-keyword">async</span> (<span class="code-var">message</span>) => {
+  <span class="code-keyword">const</span> <span class="code-var">response</span> = <span class="code-keyword">await</span> <span class="code-var">fetch</span>(<span class="code-string">'/api/chat'</span>, {
+    <span class="code-property">method</span>: <span class="code-string">'POST'</span>,
+    <span class="code-property">body</span>: <span class="code-var">JSON</span>.<span class="code-method">stringify</span>({ <span class="code-var">message</span> })
+  });
+  <span class="code-keyword">return</span> <span class="code-keyword">await</span> <span class="code-var">response</span>.<span class="code-method">json</span>();
+};</code></pre>
+                            </div>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill"><i class="fas fa-brain"></i> AI/ML</span>
+                            <span class="tech-pill"><i class="fab fa-js"></i> JavaScript</span>
+                            <span class="tech-pill"><i class="fas fa-cloud"></i> API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Data Collection -->
+                <div class="project-showcase glow-card">
+                    <div class="project-visual">
+                        <div class="project-demo data-demo">
+                            <div class="demo-header">
+                                <i class="fas fa-database"></i>
+                                <span>Data Collection System</span>
+                            </div>
+                            <div class="data-form">
+                                <div class="form-field">
+                                    <label><i class="fas fa-user"></i> Name</label>
+                                    <div class="input-field">John Doe</div>
+                                </div>
+                                <div class="form-field">
+                                    <label><i class="fas fa-envelope"></i> Email</label>
+                                    <div class="input-field">john@example.com</div>
+                                </div>
+                                <div class="form-field">
+                                    <label><i class="fas fa-comment"></i> Message</label>
+                                    <div class="input-field">Great platform!</div>
+                                </div>
+                                <div class="submit-animation">
+                                    <div class="submit-btn">
+                                        <i class="fas fa-paper-plane"></i> Submit
+                                    </div>
+                                    <div class="data-flow">
+                                        <div class="data-packet"></div>
+                                    </div>
+                                    <div class="cloud-icon">
+                                        <i class="fas fa-cloud"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-badge">
+                            <i class="fas fa-database"></i>
+                            <span>Project 02</span>
+                        </div>
+                        <h3>Cloud Data Collection</h3>
+                        <p>Create a secure serverless data collection system using Cloudflare Workers and D1 Database.
+                            Handle form submissions, store data safely, and implement GDPR-compliant data management.
+                        </p>
+                        <div class="project-code">
+                            <div class="code-snippet">
+                                <pre><code><span class="code-comment">// Cloudflare Worker - Data Handler</span>
+<span class="code-keyword">export</span> <span class="code-keyword">async</span> <span class="code-keyword">function</span> <span class="code-method">handleRequest</span>(<span class="code-var">request</span>) {
+  <span class="code-keyword">const</span> <span class="code-var">data</span> = <span class="code-keyword">await</span> <span class="code-var">request</span>.<span class="code-method">json</span>();
+  <span class="code-keyword">await</span> <span class="code-var">DB</span>.<span class="code-method">prepare</span>(
+    <span class="code-string">'INSERT INTO users VALUES (?, ?)'</span>
+  ).<span class="code-method">bind</span>(<span class="code-var">data</span>.<span class="code-property">name</span>, <span class="code-var">data</span>.<span class="code-property">email</span>).<span class="code-method">run</span>();
+}</code></pre>
+                            </div>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill"><i class="fas fa-cloud"></i> Cloudflare</span>
+                            <span class="tech-pill"><i class="fas fa-database"></i> D1 Database</span>
+                            <span class="tech-pill"><i class="fas fa-lock"></i> Security</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Python Animation -->
+                <div class="project-showcase glow-card">
+                    <div class="project-visual">
+                        <div class="project-demo animation-demo">
+                            <div class="demo-header">
+                                <i class="fas fa-play-circle"></i>
+                                <span>Manim Animation</span>
+                            </div>
+                            <div class="animation-canvas">
+                                <svg class="manim-svg" viewBox="0 0 300 200">
+                                    <!-- Animated Circle -->
+                                    <circle class="anim-circle" cx="150" cy="100" r="40" fill="none" stroke="#58a6ff"
+                                        stroke-width="3">
+                                        <animate attributeName="r" from="10" to="40" dur="2s"
+                                            repeatCount="indefinite" />
+                                        <animate attributeName="opacity" from="0" to="1" dur="2s"
+                                            repeatCount="indefinite" />
+                                    </circle>
+
+                                    <!-- Animated Path -->
+                                    <path class="anim-path" d="M 50 100 Q 150 50 250 100" fill="none" stroke="#bc8cff"
+                                        stroke-width="2">
+                                        <animate attributeName="d"
+                                            values="M 50 100 Q 150 50 250 100; M 50 100 Q 150 150 250 100; M 50 100 Q 150 50 250 100"
+                                            dur="3s" repeatCount="indefinite" />
+                                    </path>
+
+                                    <!-- Animated Text -->
+                                    <text class="anim-text" x="150" y="170" text-anchor="middle" fill="#3fb950"
+                                        font-size="16" font-family="monospace">
+                                        f(x) = x²
+                                        <animate attributeName="opacity" values="0;1;1;0" dur="4s"
+                                            repeatCount="indefinite" />
+                                    </text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-badge">
+                            <i class="fab fa-python"></i>
+                            <span>Project 03</span>
+                        </div>
+                        <h3>Python Animations with Manim</h3>
+                        <p>Create stunning programmatic animations using Manim (Mathematical Animation Engine). Build
+                            educational content, algorithm visualizations, and mathematical concepts like 3Blue1Brown.
+                        </p>
+                        <div class="project-code">
+                            <div class="code-snippet">
+                                <pre><code><span class="code-comment"># Manim Animation Example</span>
+<span class="code-keyword">from</span> <span class="code-var">manim</span> <span class="code-keyword">import</span> *
+
+<span class="code-keyword">class</span> <span class="code-class">CircleAnimation</span>(<span class="code-class">Scene</span>):
+    <span class="code-keyword">def</span> <span class="code-method">construct</span>(<span class="code-var">self</span>):
+        <span class="code-var">circle</span> = <span class="code-class">Circle</span>(<span class="code-property">color</span>=<span class="code-var">BLUE</span>)
+        <span class="code-var">self</span>.<span class="code-method">play</span>(<span class="code-class">Create</span>(<span class="code-var">circle</span>))
+        <span class="code-var">self</span>.<span class="code-method">play</span>(<span class="code-var">circle</span>.<span class="code-method">animate</span>.<span class="code-method">shift</span>(<span class="code-var">RIGHT</span>))</code></pre>
+                            </div>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill"><i class="fab fa-python"></i> Python</span>
+                            <span class="tech-pill"><i class="fas fa-video"></i> Manim</span>
+                            <span class="tech-pill"><i class="fas fa-palette"></i> Animation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="config.js"></script>
+    <script src="components.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

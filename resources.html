@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Essential developer resources - tools, platforms, documentation, and learning materials for software development.">
+    <meta name="keywords" content="developer resources, programming tools, coding platforms, development software">
+    <meta name="author" content="Md Asif">
+    <title>Developer Resources | Essential Tools & Platforms</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Particle Canvas Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Floating Dev Icons -->
+    <div class="floating-icons" id="floatingIcons"></div>
+    
+    <!-- Dynamic Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Resources Hero Section -->
+    <section class="resources-hero">
+        <div class="container">
+            <div class="resources-hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-toolbox"></i>
+                    <span>Essential Developer Resources</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Web Development Tools Section -->
+    <section class="resources-section" id="web-development-tools">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title glow-text">
+                    <i class="fas fa-globe"></i> Web Development Tools
+                </h2>
+                <p class="section-subtitle">Essential tools for frontend and backend web development</p>
+            </div>
+
+            <div class="resources-grid">
+                <!-- VS Code -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="resource-badge">Essential</div>
+                    </div>
+                    <h3>Visual Studio Code</h3>
+                    <p>Free, powerful code editor with extensive extensions and built-in Git support.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Code Editor</span>
+                        <span class="tag">Free</span>
+                        <span class="tag">Extensions</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://code.visualstudio.com/" target="_blank" class="btn-resource">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                        <a href="https://code.visualstudio.com/docs" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Git -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
+                        <div class="resource-badge">Essential</div>
+                    </div>
+                    <h3>Git</h3>
+                    <p>Version control system for tracking changes in source code during development.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Version Control</span>
+                        <span class="tag">Free</span>
+                        <span class="tag">Command Line</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://git-scm.com/" target="_blank" class="btn-resource">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                        <a href="https://git-scm.com/doc" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Node.js -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <div class="resource-badge">Popular</div>
+                    </div>
+                    <h3>Node.js</h3>
+                    <p>JavaScript runtime for building scalable network applications and server-side development.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Runtime</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Backend</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://nodejs.org/" target="_blank" class="btn-resource">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                        <a href="https://nodejs.org/docs/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Docker -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fab fa-docker"></i>
+                        </div>
+                        <div class="resource-badge">Advanced</div>
+                    </div>
+                    <h3>Docker</h3>
+                    <p>Containerization platform for developing, shipping, and running applications.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Containers</span>
+                        <span class="tag">DevOps</span>
+                        <span class="tag">Deployment</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://www.docker.com/" target="_blank" class="btn-resource">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                        <a href="https://docs.docker.com/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Postman -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                        <div class="resource-badge">API Testing</div>
+                    </div>
+                    <h3>Postman</h3>
+                    <p>API development and testing platform for building and testing APIs.</p>
+                    <div class="resource-tags">
+                        <span class="tag">API Testing</span>
+                        <span class="tag">Development</span>
+                        <span class="tag">Free Tier</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://www.postman.com/" target="_blank" class="btn-resource">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                        <a href="https://learning.postman.com/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Learn
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Figma -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fab fa-figma"></i>
+                        </div>
+                        <div class="resource-badge">Design</div>
+                    </div>
+                    <h3>Figma</h3>
+                    <p>Collaborative interface design tool for creating user interfaces and prototypes.</p>
+                    <div class="resource-tags">
+                        <span class="tag">UI Design</span>
+                        <span class="tag">Collaboration</span>
+                        <span class="tag">Free</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://www.figma.com/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Open
+                        </a>
+                        <a href="https://help.figma.com/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Help
+                        </a>
+                    </div>
+                </div>
+
+                <!-- npm -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fab fa-npm"></i>
+                        </div>
+                        <div class="resource-badge">Package Manager</div>
+                    </div>
+                    <h3>npm</h3>
+                    <p>Package manager for JavaScript, allowing you to install and manage dependencies for your projects.</p>
+                    <div class="resource-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Packages</span>
+                        <span class="tag">Free</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://www.npmjs.com/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://docs.npmjs.com/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- MongoDB -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="resource-badge">Database</div>
+                    </div>
+                    <h3>MongoDB</h3>
+                    <p>NoSQL database program that uses JSON-like documents with optional schemas for data storage.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Database</span>
+                        <span class="tag">NoSQL</span>
+                        <span class="tag">Free/Paid</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://www.mongodb.com/" target="_blank" class="btn-resource">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                        <a href="https://docs.mongodb.com/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Redis -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-memory"></i>
+                        </div>
+                        <div class="resource-badge">Cache</div>
+                    </div>
+                    <h3>Redis</h3>
+                    <p>In-memory data structure store used as a database, cache, and message broker.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Cache</span>
+                        <span class="tag">Database</span>
+                        <span class="tag">Open Source</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://redis.io/" target="_blank" class="btn-resource">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                        <a href="https://redis.io/docs/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Webpack -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <div class="resource-badge">Bundler</div>
+                    </div>
+                    <h3>Webpack</h3>
+                    <p>Static module bundler for modern JavaScript applications that bundles all your assets.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Bundler</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Free</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://webpack.js.org/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://webpack.js.org/concepts/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Guide
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ESLint -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="resource-badge">Linter</div>
+                    </div>
+                    <h3>ESLint</h3>
+                    <p>Static code analysis tool for identifying and reporting on patterns in JavaScript code.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Code Quality</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Free</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://eslint.org/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://eslint.org/docs/user-guide/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Guide
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Prettier -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <div class="resource-badge">Formatter</div>
+                    </div>
+                    <h3>Prettier</h3>
+                    <p>Opinionated code formatter that enforces a consistent code style across your project.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Code Formatting</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Free</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://prettier.io/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://prettier.io/docs/en/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Insomnia -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-moon"></i>
+                        </div>
+                        <div class="resource-badge">API Client</div>
+                    </div>
+                    <h3>Insomnia</h3>
+                    <p>Cross-platform REST client for testing and debugging APIs with a clean, modern interface.</p>
+                    <div class="resource-tags">
+                        <span class="tag">API Testing</span>
+                        <span class="tag">REST</span>
+                        <span class="tag">Free</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://insomnia.rest/" target="_blank" class="btn-resource">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                        <a href="https://docs.insomnia.rest/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Thunder Client -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="resource-badge">VS Code Extension</div>
+                    </div>
+                    <h3>Thunder Client</h3>
+                    <p>Lightweight REST API client for VS Code, perfect for testing APIs without leaving your editor.</p>
+                    <div class="resource-tags">
+                        <span class="tag">API Testing</span>
+                        <span class="tag">VS Code</span>
+                        <span class="tag">Free</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Install
+                        </a>
+                        <a href="https://github.com/rangav/thunder-client-support" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Guide
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Selenium -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="resource-badge">Testing</div>
+                    </div>
+                    <h3>Selenium</h3>
+                    <p>Open-source automation testing framework for web applications across different browsers.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Testing</span>
+                        <span class="tag">Automation</span>
+                        <span class="tag">Open Source</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://selenium.dev/" target="_blank" class="btn-resource">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                        <a href="https://selenium.dev/documentation/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- JWT.io -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <div class="resource-badge">Security</div>
+                    </div>
+                    <h3>JWT.io</h3>
+                    <p>Online tool for debugging, encoding, and decoding JSON Web Tokens (JWT) for authentication.</p>
+                    <div class="resource-tags">
+                        <span class="tag">JWT</span>
+                        <span class="tag">Security</span>
+                        <span class="tag">Free</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://jwt.io/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://jwt.io/introduction" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Guide
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Development Tools Section -->
+    <section class="resources-section" id="system-development-tools">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title glow-text">
+                    <i class="fas fa-server"></i> System Development Tools
+                </h2>
+                <p class="section-subtitle">Tools for system programming, DevOps, and infrastructure</p>
+            </div>
+
+            <div class="resources-grid">
+                <!-- Docker -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fab fa-docker"></i>
+                        </div>
+                        <div class="resource-badge">Containers</div>
+                    </div>
+                    <h3>Docker</h3>
+                    <p>Containerization platform for developing, shipping, and running applications in containers.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Containers</span>
+                        <span class="tag">DevOps</span>
+                        <span class="tag">Deployment</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://www.docker.com/" target="_blank" class="btn-resource">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                        <a href="https://docs.docker.com/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kubernetes -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-cubes"></i>
+                        </div>
+                        <div class="resource-badge">Orchestration</div>
+                    </div>
+                    <h3>Kubernetes</h3>
+                    <p>Container orchestration system for automating deployment, scaling, and management of containerized applications.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Orchestration</span>
+                        <span class="tag">DevOps</span>
+                        <span class="tag">Open Source</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://kubernetes.io/" target="_blank" class="btn-resource">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                        <a href="https://kubernetes.io/docs/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Terraform -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="resource-badge">Infrastructure</div>
+                    </div>
+                    <h3>Terraform</h3>
+                    <p>Infrastructure as Code tool for building, changing, and versioning infrastructure safely and efficiently.</p>
+                    <div class="resource-tags">
+                        <span class="tag">IaC</span>
+                        <span class="tag">DevOps</span>
+                        <span class="tag">Open Source</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://www.terraform.io/" target="_blank" class="btn-resource">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                        <a href="https://www.terraform.io/docs/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Ansible -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="resource-badge">Automation</div>
+                    </div>
+                    <h3>Ansible</h3>
+                    <p>Open-source automation platform for configuration management, application deployment, and task automation.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Automation</span>
+                        <span class="tag">DevOps</span>
+                        <span class="tag">Open Source</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://www.ansible.com/" target="_blank" class="btn-resource">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                        <a href="https://docs.ansible.com/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Jenkins -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="resource-badge">CI/CD</div>
+                    </div>
+                    <h3>Jenkins</h3>
+                    <p>Open-source automation server for building, testing, and deploying software with continuous integration.</p>
+                    <div class="resource-tags">
+                        <span class="tag">CI/CD</span>
+                        <span class="tag">Automation</span>
+                        <span class="tag">Open Source</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://www.jenkins.io/" target="_blank" class="btn-resource">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                        <a href="https://www.jenkins.io/doc/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Prometheus -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="resource-badge">Monitoring</div>
+                    </div>
+                    <h3>Prometheus</h3>
+                    <p>Open-source monitoring and alerting toolkit for systems and services with powerful querying capabilities.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Monitoring</span>
+                        <span class="tag">Metrics</span>
+                        <span class="tag">Open Source</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://prometheus.io/" target="_blank" class="btn-resource">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                        <a href="https://prometheus.io/docs/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Development Tools Section -->
+    <section class="resources-section" id="mobile-development-tools">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title glow-text">
+                    <i class="fas fa-mobile-alt"></i> Mobile Development Tools
+                </h2>
+                <p class="section-subtitle">Essential tools for iOS, Android, and cross-platform mobile development</p>
+            </div>
+
+            <div class="resources-grid">
+                <!-- React Native -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="resource-badge">Cross-Platform</div>
+                    </div>
+                    <h3>React Native</h3>
+                    <p>Framework for building native mobile apps using React and JavaScript for both iOS and Android.</p>
+                    <div class="resource-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Mobile</span>
+                        <span class="tag">Cross-Platform</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://reactnative.dev/" target="_blank" class="btn-resource">
+                            <i class="fas fa-download"></i> Get Started
+                        </a>
+                        <a href="https://reactnative.dev/docs/getting-started" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Flutter -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-feather"></i>
+                        </div>
+                        <div class="resource-badge">Cross-Platform</div>
+                    </div>
+                    <h3>Flutter</h3>
+                    <p>Google's UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Dart</span>
+                        <span class="tag">Mobile</span>
+                        <span class="tag">Cross-Platform</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://flutter.dev/" target="_blank" class="btn-resource">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                        <a href="https://docs.flutter.dev/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Xcode -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fab fa-apple"></i>
+                        </div>
+                        <div class="resource-badge">iOS</div>
+                    </div>
+                    <h3>Xcode</h3>
+                    <p>Apple's integrated development environment for macOS, iOS, watchOS, and tvOS app development.</p>
+                    <div class="resource-tags">
+                        <span class="tag">iOS</span>
+                        <span class="tag">macOS</span>
+                        <span class="tag">Free</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://developer.apple.com/xcode/" target="_blank" class="btn-resource">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                        <a href="https://developer.apple.com/documentation/xcode" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Android Studio -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fab fa-android"></i>
+                        </div>
+                        <div class="resource-badge">Android</div>
+                    </div>
+                    <h3>Android Studio</h3>
+                    <p>Official IDE for Android app development with integrated tools for building, testing, and debugging.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Android</span>
+                        <span class="tag">Java/Kotlin</span>
+                        <span class="tag">Free</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://developer.android.com/studio" target="_blank" class="btn-resource">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                        <a href="https://developer.android.com/docs" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Expo -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="resource-badge">React Native</div>
+                    </div>
+                    <h3>Expo</h3>
+                    <p>Platform and tools for building React Native apps with simplified development and deployment process.</p>
+                    <div class="resource-tags">
+                        <span class="tag">React Native</span>
+                        <span class="tag">Development</span>
+                        <span class="tag">Free/Paid</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://expo.dev/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://docs.expo.dev/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Firebase -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <div class="resource-badge">Backend</div>
+                    </div>
+                    <h3>Firebase</h3>
+                    <p>Google's mobile and web application development platform with backend services and tools.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Backend</span>
+                        <span class="tag">Database</span>
+                        <span class="tag">Free/Paid</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://firebase.google.com/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://firebase.google.com/docs" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Server & Infrastructure Tools Section -->
+    <section class="resources-section" id="server-tools">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title glow-text">
+                    <i class="fas fa-server"></i> Server & Infrastructure Tools
+                </h2>
+                <p class="section-subtitle">Cloud platforms, hosting services, and server management tools</p>
+            </div>
+
+            <div class="resources-grid">
+                <!-- AWS -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <div class="resource-badge">Cloud</div>
+                    </div>
+                    <h3>Amazon Web Services</h3>
+                    <p>Comprehensive cloud computing platform offering computing power, storage, and database services.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Cloud</span>
+                        <span class="tag">Infrastructure</span>
+                        <span class="tag">Paid</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://aws.amazon.com/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://docs.aws.amazon.com/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Cloud -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="resource-badge">Cloud</div>
+                    </div>
+                    <h3>Google Cloud Platform</h3>
+                    <p>Suite of cloud computing services including computing, storage, and machine learning capabilities.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Cloud</span>
+                        <span class="tag">AI/ML</span>
+                        <span class="tag">Paid</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://cloud.google.com/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://cloud.google.com/docs" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- DigitalOcean -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-droplet"></i>
+                        </div>
+                        <div class="resource-badge">VPS</div>
+                    </div>
+                    <h3>DigitalOcean</h3>
+                    <p>Cloud infrastructure provider offering virtual private servers, managed databases, and Kubernetes.</p>
+                    <div class="resource-tags">
+                        <span class="tag">VPS</span>
+                        <span class="tag">Simple</span>
+                        <span class="tag">Paid</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://www.digitalocean.com/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://docs.digitalocean.com/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Vercel -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="resource-badge">Hosting</div>
+                    </div>
+                    <h3>Vercel</h3>
+                    <p>Platform for frontend developers providing hosting, serverless functions, and edge computing.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Frontend</span>
+                        <span class="tag">Serverless</span>
+                        <span class="tag">Free/Paid</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://vercel.com/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://vercel.com/docs" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Netlify -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="resource-badge">Hosting</div>
+                    </div>
+                    <h3>Netlify</h3>
+                    <p>Web development platform offering hosting, serverless functions, and continuous deployment.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Frontend</span>
+                        <span class="tag">CDN</span>
+                        <span class="tag">Free/Paid</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://www.netlify.com/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://docs.netlify.com/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cloudflare -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="resource-badge">CDN</div>
+                    </div>
+                    <h3>Cloudflare</h3>
+                    <p>Web performance and security company providing CDN, DDoS protection, and DNS services.</p>
+                    <div class="resource-tags">
+                        <span class="tag">CDN</span>
+                        <span class="tag">Security</span>
+                        <span class="tag">Free/Paid</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://www.cloudflare.com/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://developers.cloudflare.com/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Documentation & References Section -->
+    <section class="resources-section" id="documentation">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title glow-text">
+                    <i class="fas fa-book"></i> Documentation & References
+                </h2>
+                <p class="section-subtitle">Essential documentation and reference materials</p>
+            </div>
+
+            <div class="resources-grid">
+                <!-- React Docs -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="resource-badge">Framework</div>
+                    </div>
+                    <h3>React Documentation</h3>
+                    <p>Official React documentation with tutorials, guides, and API reference.</p>
+                    <div class="resource-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Frontend</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://react.dev/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://react.dev/learn" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-graduation-cap"></i> Learn
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Python Docs -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="resource-badge">Language</div>
+                    </div>
+                    <h3>Python Documentation</h3>
+                    <p>Official Python documentation with tutorials, library reference, and language guide.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Backend</span>
+                        <span class="tag">Data Science</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://docs.python.org/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://docs.python.org/3/tutorial/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-graduation-cap"></i> Tutorial
+                        </a>
+                    </div>
+                </div>
+
+                <!-- W3Schools -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="resource-badge">Web</div>
+                    </div>
+                    <h3>W3Schools</h3>
+                    <p>Web development tutorials covering HTML, CSS, JavaScript, and many other technologies.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Web Development</span>
+                        <span class="tag">Tutorials</span>
+                        <span class="tag">Free</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://www.w3schools.com/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://www.w3schools.com/html/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-code"></i> HTML
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Can I Use -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="resource-badge">Compatibility</div>
+                    </div>
+                    <h3>Can I Use</h3>
+                    <p>Browser support tables for front-end web technologies.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Browser Support</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://caniuse.com/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://caniuse.com/css-grid" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-th"></i> CSS Grid
+                        </a>
+                    </div>
+                </div>
+
+                <!-- DevDocs -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <div class="resource-badge">Aggregator</div>
+                    </div>
+                    <h3>DevDocs</h3>
+                    <p>Combined documentation for multiple programming languages and frameworks.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Documentation</span>
+                        <span class="tag">Multiple Languages</span>
+                        <span class="tag">Offline</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://devdocs.io/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://devdocs.io/javascript/" target="_blank" class="btn-resource-secondary">
+                            <i class="fab fa-js"></i> JavaScript
+                        </a>
+                    </div>
+                </div>
+
+                <!-- TypeScript -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <div class="resource-badge">Language</div>
+                    </div>
+                    <h3>TypeScript</h3>
+                    <p>JavaScript with syntax for types, providing better development experience.</p>
+                    <div class="resource-tags">
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Types</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://www.typescriptlang.org/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://www.typescriptlang.org/docs/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design & UI Resources Section -->
+    <section class="resources-section" id="design-resources">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title glow-text">
+                    <i class="fas fa-palette"></i> Design & UI Resources
+                </h2>
+                <p class="section-subtitle">Tools and resources for creating beautiful user interfaces</p>
+            </div>
+
+            <div class="resources-grid">
+                <!-- Color Hunt -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="resource-badge">Colors</div>
+                    </div>
+                    <h3>Color Hunt</h3>
+                    <p>Free and open platform for color inspiration with thousands of trendy color palettes.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Color Palettes</span>
+                        <span class="tag">Free</span>
+                        <span class="tag">Inspiration</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://colorhunt.co/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://colorhunt.co/palettes/popular" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-fire"></i> Popular
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Unsplash -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <div class="resource-badge">Images</div>
+                    </div>
+                    <h3>Unsplash</h3>
+                    <p>Beautiful, free photos gifted by the world's most generous community of photographers.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Stock Photos</span>
+                        <span class="tag">Free</span>
+                        <span class="tag">High Quality</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://unsplash.com/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://unsplash.com/developers" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-code"></i> API
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Font Awesome -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-icons"></i>
+                        </div>
+                        <div class="resource-badge">Icons</div>
+                    </div>
+                    <h3>Font Awesome</h3>
+                    <p>Icon library and toolkit with thousands of icons for web, desktop, and mobile applications.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Icons</span>
+                        <span class="tag">Free/Pro</span>
+                        <span class="tag">Web Fonts</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://fontawesome.com/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://fontawesome.com/icons" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-search"></i> Browse
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Fonts -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-font"></i>
+                        </div>
+                        <div class="resource-badge">Typography</div>
+                    </div>
+                    <h3>Google Fonts</h3>
+                    <p>Free, open-source fonts optimized for the web with easy integration.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Fonts</span>
+                        <span class="tag">Free</span>
+                        <span class="tag">Web Fonts</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://fonts.google.com/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://fonts.google.com/knowledge" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Guide
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CSS Gradient -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="resource-badge">CSS</div>
+                    </div>
+                    <h3>CSS Gradient</h3>
+                    <p>Beautiful gradient generator with CSS code for linear and radial gradients.</p>
+                    <div class="resource-tags">
+                        <span class="tag">CSS</span>
+                        <span class="tag">Gradients</span>
+                        <span class="tag">Generator</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://cssgradient.io/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://cssgradient.io/gradient-backgrounds/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-images"></i> Examples
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Dribbble -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-basketball-ball"></i>
+                        </div>
+                        <div class="resource-badge">Inspiration</div>
+                    </div>
+                    <h3>Dribbble</h3>
+                    <p>Discover the world's top designers and creative professionals sharing their work.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Design</span>
+                        <span class="tag">Inspiration</span>
+                        <span class="tag">Portfolio</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://dribbble.com/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://dribbble.com/shots/popular/web-design" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-fire"></i> Popular
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productivity Tools Section -->
+    <section class="resources-section" id="productivity-tools">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title glow-text">
+                    <i class="fas fa-rocket"></i> Productivity Tools
+                </h2>
+                <p class="section-subtitle">Tools to boost your development workflow and productivity</p>
+            </div>
+
+            <div class="resources-grid">
+                <!-- Notion -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-sticky-note"></i>
+                        </div>
+                        <div class="resource-badge">Organization</div>
+                    </div>
+                    <h3>Notion</h3>
+                    <p>All-in-one workspace for notes, docs, wikis, and project management.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Notes</span>
+                        <span class="tag">Free/Paid</span>
+                        <span class="tag">Collaboration</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://www.notion.so/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://www.notion.so/templates" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-th-large"></i> Templates
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Trello -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-columns"></i>
+                        </div>
+                        <div class="resource-badge">Project Management</div>
+                    </div>
+                    <h3>Trello</h3>
+                    <p>Visual project management tool using boards, lists, and cards.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Kanban</span>
+                        <span class="tag">Free/Paid</span>
+                        <span class="tag">Team</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://trello.com/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://trello.com/templates" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-th-large"></i> Templates
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Slack -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fab fa-slack"></i>
+                        </div>
+                        <div class="resource-badge">Communication</div>
+                    </div>
+                    <h3>Slack</h3>
+                    <p>Team communication platform with channels, direct messages, and integrations.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Team Chat</span>
+                        <span class="tag">Free/Paid</span>
+                        <span class="tag">Integrations</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://slack.com/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://slack.com/help" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-question-circle"></i> Help
+                        </a>
+                    </div>
+                </div>
+
+                <!-- VS Code Extensions -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <div class="resource-badge">Extensions</div>
+                    </div>
+                    <h3>VS Code Extensions</h3>
+                    <p>Essential extensions to enhance your VS Code development experience.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Extensions</span>
+                        <span class="tag">VS Code</span>
+                        <span class="tag">Productivity</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://marketplace.visualstudio.com/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Marketplace
+                        </a>
+                        <a href="https://code.visualstudio.com/docs/editor/extension-marketplace" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Guide
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Chrome DevTools -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fab fa-chrome"></i>
+                        </div>
+                        <div class="resource-badge">Debugging</div>
+                    </div>
+                    <h3>Chrome DevTools</h3>
+                    <p>Built-in web development and debugging tools in Chrome browser.</p>
+                    <div class="resource-tags">
+                        <span class="tag">Debugging</span>
+                        <span class="tag">Browser</span>
+                        <span class="tag">Free</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://developers.google.com/web/tools/chrome-devtools" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://developers.google.com/web/tools/chrome-devtools/overview" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-book"></i> Guide
+                        </a>
+                    </div>
+                </div>
+
+                <!-- JSON Formatter -->
+                <div class="resource-card glow-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="resource-badge">Utility</div>
+                    </div>
+                    <h3>JSON Formatter</h3>
+                    <p>Online JSON formatter and validator for pretty-printing and debugging JSON data.</p>
+                    <div class="resource-tags">
+                        <span class="tag">JSON</span>
+                        <span class="tag">Formatter</span>
+                        <span class="tag">Free</span>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://jsonformatter.curiousconcept.com/" target="_blank" class="btn-resource">
+                            <i class="fas fa-external-link-alt"></i> Visit
+                        </a>
+                        <a href="https://jsonlint.com/" target="_blank" class="btn-resource-secondary">
+                            <i class="fas fa-check-circle"></i> Validator
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Dynamic Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="config.js"></script>
+    <script src="components.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

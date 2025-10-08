@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive coding practice environment for developers to experiment and learn through hands-on coding.">
+    <meta name="keywords" content="coding practice, interactive coding, code editor, live preview, developer tools">
+    <meta name="author" content="Md Asif">
+    <title>Interactive Coding Practice | DevLearn</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CodeMirror for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/monokai.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/material-darker.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js"></script>
+</head>
+
+<body>
+    <!-- Particle Canvas Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Floating Dev Icons -->
+    <div class="floating-icons" id="floatingIcons"></div>
+    
+    <!-- Dynamic Header -->
+    <div id="header-placeholder"></div>
+
+
+
+    <!-- Coding Environment Section -->
+    <section class="coding-environment">
+        <div class="container">
+            <div class="environment-header">
+                <div class="hero-badge">
+                    <i class="fas fa-terminal"></i>
+                    <span>Practicing Lab</span>
+                </div>
+                <h2 class="section-title glow-text">
+                    <i class="fas fa-code"></i> Interactive Coding Environment
+                </h2>
+            </div>
+
+            <!-- Terminal-style Preview -->
+            <div class="terminal-preview">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-controls">
+                            <span class="control-dot red"></span>
+                            <span class="control-dot yellow"></span>
+                            <span class="control-dot green"></span>
+                        </div>
+                        <div class="terminal-title">DevLearn Code Editor</div>
+                    </div>
+                    <div class="terminal-content">
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-command">devlearn editor --open</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">Opening DevLearn Code Editor...</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">✓ Multi-language support (HTML, CSS, JS, Python)</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">✓ Live preview with real-time updates</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">✓ Syntax highlighting and auto-completion</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">✓ Save and load your projects</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-cursor">_</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="terminal-actions">
+                    <button class="btn-terminal-primary" onclick="openCodeEditor()">
+                        <i class="fas fa-external-link-alt"></i>
+                        Open Code Editor
+                    </button>
+                    <button class="btn-terminal-secondary" onclick="showEditorFeatures()">
+                        <i class="fas fa-info-circle"></i>
+                        View Features
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Challenges Section -->
+    <section class="practice-challenges">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title glow-text">
+                    <i class="fas fa-trophy"></i> Practice Challenges
+                </h2>
+                <p class="section-subtitle">Test your skills with interactive coding challenges</p>
+            </div>
+
+            <div class="challenges-grid">
+                <!-- Challenge 1 -->
+                <div class="challenge-card glow-card">
+                    <div class="challenge-header">
+                        <div class="challenge-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="challenge-difficulty">Intermediate</div>
+                    </div>
+                    <h3>Calculator</h3>
+                    <p>Build a functional calculator with JavaScript that can perform basic arithmetic operations.</p>
+                    <div class="challenge-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Logic</span>
+                        <span class="tag">DOM</span>
+                    </div>
+                    <button class="btn-challenge" onclick="openEditorWithPractice('calculator')">
+                        <i class="fas fa-play"></i> Start Practice
+                    </button>
+                </div>
+
+                <!-- Challenge 2 -->
+                <div class="challenge-card glow-card">
+                    <div class="challenge-header">
+                        <div class="challenge-icon">
+                            <i class="fas fa-list"></i>
+                        </div>
+                        <div class="challenge-difficulty">Intermediate</div>
+                    </div>
+                    <h3>Todo List</h3>
+                    <p>Create an interactive todo list with add, remove, and mark complete functionality.</p>
+                    <div class="challenge-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">DOM</span>
+                        <span class="tag">CRUD</span>
+                    </div>
+                    <button class="btn-challenge" onclick="openEditorWithPractice('todo-list')">
+                        <i class="fas fa-play"></i> Start Practice
+                    </button>
+                </div>
+
+
+                <!-- Challenge 4 -->
+                <div class="challenge-card glow-card">
+                    <div class="challenge-header">
+                        <div class="challenge-icon">
+                            <i class="fas fa-wpforms"></i>
+                        </div>
+                        <div class="challenge-difficulty">Intermediate</div>
+                    </div>
+                    <h3>Form</h3>
+                    <p>Build a comprehensive form with validation, data collection, and user feedback.</p>
+                    <div class="challenge-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Validation</span>
+                    </div>
+                    <button class="btn-challenge" onclick="openEditorWithPractice('form')">
+                        <i class="fas fa-play"></i> Start Practice
+                    </button>
+                </div>
+
+                <!-- Challenge 5 -->
+                <div class="challenge-card glow-card">
+                    <div class="challenge-header">
+                        <div class="challenge-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="challenge-difficulty">Advanced</div>
+                    </div>
+                    <h3>AI Chat Bot</h3>
+                    <p>Create an interactive chat interface with AI responses and conversation flow.</p>
+                    <div class="challenge-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">AI</span>
+                        <span class="tag">Chat</span>
+                    </div>
+                    <button class="btn-challenge" onclick="openEditorWithPractice('ai-chatbot')">
+                        <i class="fas fa-play"></i> Start Practice
+                    </button>
+                </div>
+
+                <!-- Challenge 6 -->
+                <div class="challenge-card glow-card">
+                    <div class="challenge-header">
+                        <div class="challenge-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="challenge-difficulty">Advanced</div>
+                    </div>
+                    <h3>Data Visualization</h3>
+                    <p>Create an interactive chart using JavaScript to visualize data with animations.</p>
+                    <div class="challenge-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Charts</span>
+                        <span class="tag">Data</span>
+                    </div>
+                    <button class="btn-challenge" onclick="openEditorWithPractice('data-viz')">
+                        <i class="fas fa-play"></i> Start Practice
+                    </button>
+                </div>
+
+                <!-- Challenge 7 - Python Project -->
+                <div class="challenge-card glow-card">
+                    <div class="challenge-header">
+                        <div class="challenge-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="challenge-difficulty">Intermediate</div>
+                    </div>
+                    <h3>Python Data Analyzer</h3>
+                    <p>Build a Python application to analyze student grades, calculate statistics, and generate reports.</p>
+                    <div class="challenge-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Data Analysis</span>
+                        <span class="tag">Statistics</span>
+                    </div>
+                    <button class="btn-challenge" onclick="openEditorWithPractice('python-analyzer')">
+                        <i class="fas fa-play"></i> Start Practice
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Dynamic Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="config.js"></script>
+    <script src="components.js"></script>
+    <script src="script.js"></script>
+    <script src="practice.js"></script>
+</body>
+
+</html>
