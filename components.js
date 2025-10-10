@@ -107,19 +107,13 @@ class ComponentSystem {
                         <div class="footer-social">
                             <span class="footer-social-label">Connect:</span>
                             <div class="social-links">
-                                <a href="#" class="social-link" aria-label="GitHub">
+                                <a href="https://github.com/Asaascom-Web" target="_blank" class="social-link" aria-label="GitHub">
                                     <i class="fab fa-github"></i>
                                 </a>
-                                <a href="#" class="social-link" aria-label="LinkedIn">
+                                <a href="https://www.linkedin.com/company/telecommunication-engineering-college" target="_blank" class="social-link" aria-label="LinkedIn">
                                     <i class="fab fa-linkedin"></i>
                                 </a>
-                                <a href="#" class="social-link" aria-label="Twitter">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="#" class="social-link" aria-label="YouTube">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
-                                <a href="#" class="social-link" aria-label="Discord">
+                                <a href="https://discord.gg/H3STgr2RAN" target="_blank" class="social-link" aria-label="Discord">
                                     <i class="fab fa-discord"></i>
                                 </a>
                             </div>
