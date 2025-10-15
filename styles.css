@@ -3016,12 +3016,14 @@ section {
     position: relative;
     z-index: 2;
     background: white;
-    overflow: hidden;
+    overflow: auto;
+    min-height: 0;
 }
 
 .preview-content iframe {
     width: 100%;
     height: 100%;
+    min-height: 100%;
     border: none;
     background: white;
 }
@@ -3569,6 +3571,9 @@ section {
     position: relative;
     z-index: 2;
     background: #1a1a1a;
+    overflow: auto;
+    min-height: 0;
+    scroll-behavior: smooth;
 }
 
 .code-editor-container textarea {
@@ -3585,6 +3590,31 @@ section {
     resize: none;
 }
 
+/* Custom Scrollbar for Code Editor */
+.code-editor-container::-webkit-scrollbar,
+.fullscreen-editor .CodeMirror-scroll::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+.code-editor-container::-webkit-scrollbar-track,
+.fullscreen-editor .CodeMirror-scroll::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+}
+
+.code-editor-container::-webkit-scrollbar-thumb,
+.fullscreen-editor .CodeMirror-scroll::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-purple) 100%);
+    border-radius: 6px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.code-editor-container::-webkit-scrollbar-thumb:hover,
+.fullscreen-editor .CodeMirror-scroll::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #6eb5ff 0%, #c89fff 100%);
+}
+
 /* CodeMirror Full-Screen Styling */
 .fullscreen-editor .CodeMirror {
     height: 100% !important;
@@ -3593,6 +3623,11 @@ section {
     line-height: 1.6 !important;
     background: transparent !important;
     color: #e6e6e6 !important;
+}
+
+.fullscreen-editor .CodeMirror-scroll {
+    overflow-y: auto !important;
+    overflow-x: auto !important;
 }
 
 .fullscreen-editor .CodeMirror-gutters {
@@ -3709,14 +3744,37 @@ section {
     position: relative;
     z-index: 2;
     background: white;
-    overflow: hidden;
+    overflow: auto;
+    min-height: 0;
 }
 
 .preview-content iframe {
     width: 100%;
     height: 100%;
+    min-height: 100%;
     border: none;
     background: white;
+}
+
+/* Custom Scrollbar for Preview Content */
+.preview-content::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+.preview-content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+}
+
+.preview-content::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-purple) 100%);
+    border-radius: 6px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.preview-content::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #6eb5ff 0%, #c89fff 100%);
 }
 
 /* Loading Overlay */
