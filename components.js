@@ -157,8 +157,8 @@ class ComponentSystem {
                             </div>
                             <div class="instructor-info">
                                 <p class="instructor-name">Mohammed Asif</p>
-                                <p class="instructor-title">Software Development Trainer</p>
-                                <p class="instructor-bio">Passionate about teaching and empowering the next generation of developers.</p>
+                                <p class="instructor-title">Researcher & Developer</p>
+                                <p class="instructor-bio">I’m a developer who’s always curious about how things work especially when it comes to technology.</p>
                             </div>
                         </div>
                     </div>
