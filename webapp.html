@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A comprehensive learning platform for software engineers to strengthen their foundations and grow their development skills.">
+    <meta name="keywords" content="software development, learning platform, web development, coding tutorials">
+    <meta name="author" content="Md Asif">
+    <title>Software Development Learning Platform | Web Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for dev icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Particle Canvas Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Floating Dev Icons -->
+    <div class="floating-icons" id="floatingIcons"></div>
+    <!-- Dynamic Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Resources Hero Section -->
+    <section class="resources-hero">
+        <div class="container">
+            <div class="resources-hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-desktop"></i>
+                    <span>Web Application</span>
+                </div>
+                
+                <!-- User Info Section (shown when logged in) -->
+                <div class="user-info-section" id="userInfoSection" style="margin-top: 2rem;">
+                    <div class="user-welcome">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Welcome, <strong id="userEmail"></strong></span>
+                    </div>
+                    <button class="btn-logout" id="logoutBtn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Showcase Projects Section -->
+    <section class="showcase-projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title glow-text">
+                    <i class="fas fa-rocket"></i> Real-World Projects
+                </h2>
+                <p class="section-subtitle">You'll explore these projects during the course</p>
+            </div>
+
+            <div class="projects-showcase">
+                <!-- Project 1: AI Chat Integration -->
+                <div class="project-showcase glow-card">
+                    <div class="project-visual">
+                        <div class="project-demo chat-demo">
+                            <div class="demo-header">
+                                <i class="fas fa-robot"></i>
+                                <span>AI Chatbot</span>
+                            </div>
+                            <div class="chat-messages" id="chatDemo">
+                                <div class="chat-message user-message">
+                                    <div class="message-avatar"><i class="fas fa-user"></i></div>
+                                    <div class="message-content">Hello! What can you help me with?</div>
+                                </div>
+                                <div class="chat-message bot-message">
+                                    <div class="message-avatar"><i class="fas fa-robot"></i></div>
+                                    <div class="message-content typing">
+                                        <span class="typing-indicator">
+                                            <span></span><span></span><span></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-badge">
+                            <i class="fas fa-robot"></i>
+                            <span>Project 01</span>
+                        </div>
+                        <h3>AI Chat Integration</h3>
+                        <p>Build an intelligent chatbot using OpenAI, Google Gemini, or Anthropic Claude. Learn to
+                            integrate Large Language Models (LLMs) into your web applications with real-time
+                            conversations.</p>
+                        <div class="project-code">
+                            <div class="code-snippet">
+                                <pre><code><span class="code-comment">// AI Chatbot Integration</span>
+<span class="code-keyword">const</span> <span class="code-var">chat</span> = <span class="code-keyword">async</span> (<span class="code-var">message</span>) => {
+  <span class="code-keyword">const</span> <span class="code-var">response</span> = <span class="code-keyword">await</span> <span class="code-var">fetch</span>(<span class="code-string">'/api/chat'</span>, {
+    <span class="code-property">method</span>: <span class="code-string">'POST'</span>,
+    <span class="code-property">body</span>: <span class="code-var">JSON</span>.<span class="code-method">stringify</span>({ <span class="code-var">message</span> })
+  });
+  <span class="code-keyword">return</span> <span class="code-keyword">await</span> <span class="code-var">response</span>.<span class="code-method">json</span>();
+};</code></pre>
+                            </div>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill"><i class="fas fa-brain"></i> AI/ML</span>
+                            <span class="tech-pill"><i class="fab fa-js"></i> JavaScript</span>
+                            <span class="tech-pill"><i class="fas fa-cloud"></i> API</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://learning-llm-api.pages.dev/" target="_blank" class="project-btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live Project</span>
+                            </a>
+                            <a href="https://github.com/Asaascom-Web/Learning-llm-api" target="_blank" class="project-btn btn-secondary">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 02: Video Streaming Integration -->
+                <div class="project-showcase glow-card">
+                    <div class="project-visual">
+                        <div class="project-demo video-demo">
+                            <div class="demo-header">
+                                <i class="fas fa-video"></i>
+                                <span>Video Streaming Platform</span>
+                            </div>
+                            <div class="video-player">
+                                <div class="video-screen">
+                                    <div class="video-content">
+                                        <div class="stream-indicator">
+                                            <span class="live-badge"><i class="fas fa-circle"></i> LIVE</span>
+                                        </div>
+                                        <div class="video-overlay">
+                                            <div class="play-button">
+                                                <i class="fas fa-play"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="video-controls">
+                                    <div class="control-group">
+                                        <i class="fas fa-play control-icon"></i>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill"></div>
+                                        </div>
+                                        <span class="time-display">2:45 / 10:30</span>
+                                    </div>
+                                    <div class="control-icons">
+                                        <i class="fas fa-volume-up control-icon"></i>
+                                        <i class="fas fa-cog control-icon"></i>
+                                        <i class="fas fa-expand control-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-badge">
+                            <i class="fas fa-video"></i>
+                            <span>Project 02</span>
+                        </div>
+                        <h3>Video Streaming Integration</h3>
+                        <p>Build a powerful video streaming platform with real-time playback, adaptive bitrate streaming, 
+                            and live video capabilities. Integrate services like YouTube API, Cloudflare Stream, or implement 
+                            WebRTC for peer-to-peer video communication.</p>
+                        <div class="project-code">
+                            <div class="code-snippet">
+                                <pre><code><span class="code-comment">// Video Streaming Implementation</span>
+<span class="code-keyword">const</span> <span class="code-var">videoPlayer</span> = <span class="code-keyword">new</span> <span class="code-class">VideoPlayer</span>({
+  <span class="code-property">source</span>: <span class="code-string">'https://stream.cloudflare.com/video'</span>,
+  <span class="code-property">adaptive</span>: <span class="code-keyword">true</span>,
+  <span class="code-property">quality</span>: [<span class="code-string">'1080p'</span>, <span class="code-string">'720p'</span>, <span class="code-string">'480p'</span>]
+});
+<span class="code-var">videoPlayer</span>.<span class="code-method">play</span>();</code></pre>
+                            </div>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill"><i class="fas fa-video"></i> Video API</span>
+                            <span class="tech-pill"><i class="fab fa-js"></i> JavaScript</span>
+                            <span class="tech-pill"><i class="fas fa-broadcast-tower"></i> WebRTC</span>
+                            <span class="tech-pill"><i class="fas fa-stream"></i> Streaming</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://video-streaming-integration.pages.dev/" target="_blank" class="project-btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live Project</span>
+                            </a>
+                            <a href="https://github.com/Asaascom-Web/Video-Streaming-Integration" target="_blank" class="project-btn btn-secondary">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 03: Data Collection -->
+                <div class="project-showcase glow-card">
+                    <div class="project-visual">
+                        <div class="project-demo data-demo">
+                            <div class="demo-header">
+                                <i class="fas fa-database"></i>
+                                <span>Data Collection System</span>
+                            </div>
+                            <div class="data-form">
+                                <div class="form-field">
+                                    <label><i class="fas fa-user"></i> Name</label>
+                                    <div class="input-field">Maset</div>
+                                </div>
+                                <div class="form-field">
+                                    <label><i class="fas fa-envelope"></i> Email</label>
+                                    <div class="input-field">info@maset.org.my</div>
+                                </div>
+                                <div class="form-field">
+                                    <label><i class="fas fa-comment"></i> Message</label>
+                                    <div class="input-field">Great platform!</div>
+                                </div>
+                                <div class="submit-animation">
+                                    <div class="submit-btn">
+                                        <i class="fas fa-paper-plane"></i> Submit
+                                    </div>
+                                    <div class="data-flow">
+                                        <div class="data-packet"></div>
+                                    </div>
+                                    <div class="cloud-icon">
+                                        <i class="fas fa-cloud"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-badge">
+                            <i class="fas fa-database"></i>
+                            <span>Project 03</span>
+                        </div>
+                        <h3>Cloud Data Collection</h3>
+                        <p>Create a secure serverless data collection system using Cloudflare Workers and D1 Database.
+                            Handle form submissions, store data safely, and implement GDPR-compliant data management.
+                        </p>
+                        <div class="project-code">
+                            <div class="code-snippet">
+                                <pre><code><span class="code-comment">// Cloudflare Worker - Data Handler</span>
+<span class="code-keyword">export</span> <span class="code-keyword">async</span> <span class="code-keyword">function</span> <span class="code-method">handleRequest</span>(<span class="code-var">request</span>) {
+  <span class="code-keyword">const</span> <span class="code-var">data</span> = <span class="code-keyword">await</span> <span class="code-var">request</span>.<span class="code-method">json</span>();
+  <span class="code-keyword">await</span> <span class="code-var">DB</span>.<span class="code-method">prepare</span>(
+    <span class="code-string">'INSERT INTO users VALUES (?, ?)'</span>
+  ).<span class="code-method">bind</span>(<span class="code-var">data</span>.<span class="code-property">name</span>, <span class="code-var">data</span>.<span class="code-property">email</span>).<span class="code-method">run</span>();
+}</code></pre>
+                            </div>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill"><i class="fas fa-cloud"></i> Cloudflare</span>
+                            <span class="tech-pill"><i class="fas fa-database"></i> D1 Database</span>
+                            <span class="tech-pill"><i class="fas fa-lock"></i> Security</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://cloud-server-data-collection.pages.dev/" target="_blank" class="project-btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live Project</span>
+                            </a>
+                            <a href="https://github.com/Asaascom-Web/Cloud-Data-Collection" target="_blank" class="project-btn btn-secondary">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 04: Python Animation -->
+                <div class="project-showcase glow-card">
+                    <div class="project-visual">
+                        <div class="project-demo animation-demo">
+                            <div class="demo-header">
+                                <i class="fas fa-play-circle"></i>
+                                <span>Manim Animation</span>
+                            </div>
+                            <div class="animation-canvas">
+                                <svg class="manim-svg" viewBox="0 0 300 200">
+                                    <!-- Animated Circle -->
+                                    <circle class="anim-circle" cx="150" cy="100" r="40" fill="none" stroke="#58a6ff"
+                                        stroke-width="3">
+                                        <animate attributeName="r" from="10" to="40" dur="2s"
+                                            repeatCount="indefinite" />
+                                        <animate attributeName="opacity" from="0" to="1" dur="2s"
+                                            repeatCount="indefinite" />
+                                    </circle>
+
+                                    <!-- Animated Path -->
+                                    <path class="anim-path" d="M 50 100 Q 150 50 250 100" fill="none" stroke="#bc8cff"
+                                        stroke-width="2">
+                                        <animate attributeName="d"
+                                            values="M 50 100 Q 150 50 250 100; M 50 100 Q 150 150 250 100; M 50 100 Q 150 50 250 100"
+                                            dur="3s" repeatCount="indefinite" />
+                                    </path>
+
+                                    <!-- Animated Text -->
+                                    <text class="anim-text" x="150" y="170" text-anchor="middle" fill="#3fb950"
+                                        font-size="16" font-family="monospace">
+                                        f(x) = x²
+                                        <animate attributeName="opacity" values="0;1;1;0" dur="4s"
+                                            repeatCount="indefinite" />
+                                    </text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-badge">
+                            <i class="fab fa-python"></i>
+                            <span>Project 04</span>
+                        </div>
+                        <h3>Python Animations with Manim</h3>
+                        <p>Create stunning programmatic animations using Manim (Mathematical Animation Engine). Build
+                            educational content, algorithm visualizations, and mathematical concepts like 3Blue1Brown.
+                        </p>
+                        <div class="project-code">
+                            <div class="code-snippet">
+                                <pre><code><span class="code-comment"># Manim Animation Example</span>
+<span class="code-keyword">from</span> <span class="code-var">manim</span> <span class="code-keyword">import</span> *
+
+<span class="code-keyword">class</span> <span class="code-class">CircleAnimation</span>(<span class="code-class">Scene</span>):
+    <span class="code-keyword">def</span> <span class="code-method">construct</span>(<span class="code-var">self</span>):
+        <span class="code-var">circle</span> = <span class="code-class">Circle</span>(<span class="code-property">color</span>=<span class="code-var">BLUE</span>)
+        <span class="code-var">self</span>.<span class="code-method">play</span>(<span class="code-class">Create</span>(<span class="code-var">circle</span>))
+        <span class="code-var">self</span>.<span class="code-method">play</span>(<span class="code-var">circle</span>.<span class="code-method">animate</span>.<span class="code-method">shift</span>(<span class="code-var">RIGHT</span>))</code></pre>
+                            </div>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill"><i class="fab fa-python"></i> Python</span>
+                            <span class="tech-pill"><i class="fas fa-video"></i> Manim</span>
+                            <span class="tech-pill"><i class="fas fa-palette"></i> Animation</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="project-btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live Project</span>
+                            </a>
+                            <a href="#" class="project-btn btn-secondary">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="config.js"></script>
+    <script src="components.js"></script>
+    <script src="script.js"></script>
+    
+    <!-- Authentication Protection Script -->
+    <script>
+        // Authentication Check - Must be logged in to access this page
+        (function() {
+            const authToken = localStorage.getItem('devlearn_auth_token');
+            const userEmail = localStorage.getItem('devlearn_user_email');
+            
+            // If not authenticated, redirect to login page
+            if (!authToken) {
+                window.location.href = 'login.html';
+                return;
+            }
+            
+            // Display user email in the welcome section
+            const userEmailElement = document.getElementById('userEmail');
+            if (userEmailElement && userEmail) {
+                userEmailElement.textContent = userEmail;
+            }
+            
+            // Logout functionality
+            const logoutBtn = document.getElementById('logoutBtn');
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', function() {
+                    // Confirm logout
+                    if (confirm('Are you sure you want to logout?')) {
+                        // Clear authentication data
+                        localStorage.removeItem('devlearn_auth_token');
+                        localStorage.removeItem('devlearn_user_email');
+                        localStorage.removeItem('devlearn_login_time');
+                        
+                        // Show logout message
+                        alert('You have been logged out successfully!');
+                        
+                        // Redirect to login page
+                        window.location.href = 'login.html';
+                    }
+                });
+            }
+            
+            // Optional: Session timeout (auto-logout after 24 hours)
+            const loginTime = localStorage.getItem('devlearn_login_time');
+            if (loginTime) {
+                const loginDate = new Date(loginTime);
+                const currentDate = new Date();
+                const hoursSinceLogin = (currentDate - loginDate) / (1000 * 60 * 60);
+                
+                // Auto-logout after 24 hours
+                if (hoursSinceLogin > 24) {
+                    alert('Your session has expired. Please login again.');
+                    localStorage.removeItem('devlearn_auth_token');
+                    localStorage.removeItem('devlearn_user_email');
+                    localStorage.removeItem('devlearn_login_time');
+                    window.location.href = 'login.html';
+                }
+            }
+        })();
+    </script>
+</body>
+
+</html>

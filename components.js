@@ -52,6 +52,10 @@ class ComponentSystem {
                             <i class="fas fa-folder-open"></i>
                             <span>Resources</span>
                         </a></li>
+                        <li><a href="webapp.html" class="nav-link ${this.getCurrentPage() === 'webapp' ? 'active' : ''}">
+                            <i class="fas fa-desktop"></i>
+                            <span>WebApp</span>
+                        </a></li>
                     </ul>
                     <a href="practice.html" class="btn-nav-cta">
                         <i class="fas fa-rocket"></i>
