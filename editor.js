@@ -135,6 +135,11 @@ class FullScreenEditor {
 
         this.editor.setOption('mode', modes[tab]);
         this.editor.setValue(this.code[tab] || '');
+        
+        // Pre-load Python environment when switching to Python tab
+        if (tab === 'python' && this.code[tab]) {
+            this.runCode();
+        }
     }
 
     // ===================================
@@ -267,8 +272,10 @@ class FullScreenEditor {
     <script>
         let pyodideLoaded = false;
         
-        async function loadPyodide() {
-            if (pyodideLoaded) return;
+        let pyodide = null;
+        
+        async function loadPyodideEnv() {
+            if (pyodideLoaded) return pyodide;
             
             const output = document.getElementById('python-output');
             output.textContent = 'Loading Python environment... (This may take a moment)';
@@ -284,12 +291,20 @@ class FullScreenEditor {
                     script.onerror = reject;
                 });
                 
-                await loadPyodide();
+                // Wait for Pyodide to be available
+                while (!window.loadPyodide) {
+                    await new Promise(resolve => setTimeout(resolve, 100));
+                }
+                
+                // Initialize Pyodide
+                pyodide = await window.loadPyodide();
                 pyodideLoaded = true;
                 output.textContent = 'Python environment loaded! Click "Run Python Code" to execute.';
+                return pyodide;
                 
             } catch (error) {
                 output.innerHTML = '<div class="python-error">Failed to load Python environment: ' + error.message + '</div>';
+                return null;
             }
         }
         
@@ -298,37 +313,41 @@ class FullScreenEditor {
             const pythonCode = \`${pythonCode.replace(/`/g, '\\`')}\`;
             
             if (!pyodideLoaded) {
-                await loadPyodide();
-                if (!pyodideLoaded) return;
+                pyodide = await loadPyodideEnv();
+                if (!pyodide) return;
             }
             
             try {
                 output.textContent = 'Running Python code...';
                 
                 // Run Python code and capture output
-                const pythonScript = "import sys\n" +
-                    "from io import StringIO\n" +
-                    "\n" +
-                    "# Capture stdout\n" +
-                    "old_stdout = sys.stdout\n" +
-                    "sys.stdout = mystdout = StringIO()\n" +
-                    "\n" +
-                    "try:\n" +
-                    "    exec('''" + pythonCode.replace(/'/g, "\\'") + "''')\n" +
-                    "except Exception as e:\n" +
-                    "    print(f'Error: {e}')\n" +
-                    "finally:\n" +
-                    "    sys.stdout = old_stdout\n" +
-                    "    print(mystdout.getvalue())";
+                const pythonScript = \`
+import sys
+from io import StringIO
+
+# Capture stdout
+old_stdout = sys.stdout
+sys.stdout = mystdout = StringIO()
+
+try:
+    exec("""${pythonCode.replace(/"/g, '\\"')}""")
+except Exception as e:
+    import traceback
+    print(f'Error: {e}')
+    print(traceback.format_exc())
+finally:
+    sys.stdout = old_stdout
+    output_text = mystdout.getvalue()
+\`;
                 
                 pyodide.runPython(pythonScript);
                 
                 // Get the output
-                const result = pyodide.runPython('mystdout.getvalue()');
-                output.textContent = result || 'No output';
+                const result = pyodide.runPython('output_text');
+                output.textContent = result || 'Code executed successfully (no output)';
                 
             } catch (error) {
-                output.innerHTML = '<div class="python-error">Error: ' + error.message + '</div>';
+                output.innerHTML = '<div class="python-error">Error: ' + error.message + '<br><br>Note: Make sure your Python code uses print() statements to see output.</div>';
             }
         }
     </script>
