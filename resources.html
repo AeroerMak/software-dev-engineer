@@ -31,6 +31,30 @@
                     <i class="fas fa-toolbox"></i>
                     <span>Essential Developer Resources</span>
                 </div>
+                
+                <!-- Search Bar -->
+                <div class="resources-search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" id="resourcesSearch" placeholder="Search tools, platforms, or technologies..." autocomplete="off">
+                        <button class="clear-search" id="clearSearch" style="display: none;">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="search-filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="essential">Essential</button>
+                        <button class="filter-btn" data-filter="popular">Popular</button>
+                        <button class="filter-btn" data-filter="advanced">Advanced</button>
+                        <button class="filter-btn" data-filter="utility">Utility</button>
+                    </div>
+                </div>
+                
+                <!-- Search Results Info -->
+                <div class="search-results-info" id="searchResultsInfo" style="display: none;">
+                    <span id="searchResultsCount">0</span> results found
+                    <button class="clear-all-filters" id="clearAllFilters">Clear all filters</button>
+                </div>
             </div>
         </div>
     </section>
@@ -1442,6 +1466,7 @@
     <script src="config.js"></script>
     <script src="components.js"></script>
     <script src="script.js"></script>
+    <script src="resources-search.js"></script>
 </body>
 
 </html>
