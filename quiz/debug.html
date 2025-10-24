@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Debug</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #1a1a1a; color: white; }
+        .option { padding: 10px; margin: 5px; background: #333; border: 1px solid #555; cursor: pointer; }
+        .option:hover { background: #444; }
+        .option.selected { background: #0066cc; }
+        #answerOptions { margin: 20px 0; }
+        button { padding: 10px 20px; margin: 10px; background: #0066cc; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Quiz Debug</h1>
+    <div id="questionText">Which HTML tag is used to create a hyperlink?</div>
+    <div id="answerOptions">
+        <div class="option" data-option="A">
+            <div>A. &lt;link&gt;</div>
+        </div>
+        <div class="option" data-option="B">
+            <div>B. &lt;a&gt;</div>
+        </div>
+        <div class="option" data-option="C">
+            <div>C. &lt;href&gt;</div>
+        </div>
+        <div class="option" data-option="D">
+            <div>D. &lt;url&gt;</div>
+        </div>
+    </div>
+    <button onclick="testQuiz()">Test Quiz</button>
+    <button onclick="clearOptions()">Clear Options</button>
+    <button onclick="addOptions()">Add Options</button>
+
+    <script>
+        function testQuiz() {
+            console.log('Testing quiz...');
+            
+            const question = {
+                question: "Which HTML tag is used to create a hyperlink?",
+                options: [
+                    "<link>",
+                    "<a>",
+                    "<href>",
+                    "<url>"
+                ],
+                correctAnswer: "B"
+            };
+            
+            console.log('Question:', question);
+            
+            const optionsContainer = document.getElementById('answerOptions');
+            console.log('Options container:', optionsContainer);
+            console.log('Container children before:', optionsContainer.children.length);
+            
+            optionsContainer.innerHTML = '';
+            console.log('Container cleared');
+            
+            question.options.forEach((option, index) => {
+                const optionElement = document.createElement('div');
+                optionElement.className = 'option';
+                optionElement.dataset.option = String.fromCharCode(65 + index);
+                
+                optionElement.innerHTML = `
+                    <div>${String.fromCharCode(65 + index)}. ${option}</div>
+                `;
+                
+                optionsContainer.appendChild(optionElement);
+                console.log('Added option:', option);
+            });
+            
+            console.log('Total options added:', optionsContainer.children.length);
+        }
+        
+        function clearOptions() {
+            document.getElementById('answerOptions').innerHTML = '';
+            console.log('Options cleared');
+        }
+        
+        function addOptions() {
+            const options = ["<link>", "<a>", "<href>", "<url>"];
+            const container = document.getElementById('answerOptions');
+            
+            options.forEach((option, index) => {
+                const div = document.createElement('div');
+                div.className = 'option';
+                div.innerHTML = `<div>${String.fromCharCode(65 + index)}. ${option}</div>`;
+                container.appendChild(div);
+            });
+            
+            console.log('Options added manually');
+        }
+    </script>
+</body>
+</html>

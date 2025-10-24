@@ -205,6 +205,8 @@ const navbar = document.getElementById('navbar');
 let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
+    if (!navbar) return; // Skip if navbar doesn't exist (e.g., on quiz page)
+    
     const currentScroll = window.pageYOffset;
     
     if (currentScroll > 50) {
@@ -434,6 +436,7 @@ if (chatDemo) {
     
     function showBotResponse() {
         const botMessage = chatDemo.querySelector('.bot-message .message-content');
+        if (!botMessage) return; // Skip if botMessage doesn't exist
         const typingIndicator = botMessage.querySelector('.typing-indicator');
         
         // Show typing for 2 seconds

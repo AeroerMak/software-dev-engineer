@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #1a1a1a; color: white; }
+        .option { padding: 10px; margin: 5px; background: #333; border: 1px solid #555; cursor: pointer; }
+        .option:hover { background: #444; }
+        .option.selected { background: #0066cc; }
+        #answerOptions { margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <h1>Quiz Test</h1>
+    <div id="questionText">Which HTML tag is used to create a hyperlink?</div>
+    <div id="answerOptions"></div>
+    <button onclick="testQuiz()">Test Quiz</button>
+
+    <script>
+        function testQuiz() {
+            console.log('Testing quiz...');
+            
+            const question = {
+                question: "Which HTML tag is used to create a hyperlink?",
+                options: [
+                    "<link>",
+                    "<a>",
+                    "<href>",
+                    "<url>"
+                ],
+                correctAnswer: "B"
+            };
+            
+            console.log('Question:', question);
+            
+            const optionsContainer = document.getElementById('answerOptions');
+            console.log('Options container:', optionsContainer);
+            
+            optionsContainer.innerHTML = '';
+            
+            question.options.forEach((option, index) => {
+                const optionElement = document.createElement('div');
+                optionElement.className = 'option';
+                optionElement.dataset.option = String.fromCharCode(65 + index);
+                
+                optionElement.innerHTML = `
+                    <div>${String.fromCharCode(65 + index)}. ${option}</div>
+                `;
+                
+                optionsContainer.appendChild(optionElement);
+                console.log('Added option:', option);
+            });
+            
+            console.log('Total options added:', optionsContainer.children.length);
+        }
+    </script>
+</body>
+</html>

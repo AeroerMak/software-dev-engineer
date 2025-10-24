@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Computer Science Q&A Examination System - Test your knowledge with interactive quizzes">
+    <meta name="keywords" content="computer science quiz, programming test, CS examination, coding assessment">
+    <meta name="author" content="Md Asif">
+    <title>CS Q&A Examination System | DevLearn</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="quiz/css/quiz-styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Particle Canvas Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Floating Dev Icons -->
+    <div class="floating-icons" id="floatingIcons"></div>
+    
+    <!-- Dynamic Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Quiz Selection Section -->
+    <section class="quiz-selection" id="quizSelection">
+        <div class="container">
+            <div class="quiz-hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Computer Science Examination</span>
+                </div>
+                <h1 class="hero-title">
+                    Test Your Knowledge<br>
+                    <span class="gradient-text glow-text">Choose Your Challenge</span>
+                </h1>
+                <p class="hero-description">
+                    
+                </p>
+
+                <!-- Quiz Level Cards -->
+                <div class="quiz-levels">
+                    <!-- Fundamentals Level -->
+                    <div class="quiz-level-card glow-card" data-level="fundamentals">
+                        <div class="level-header">
+                            <div class="level-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <div class="level-badge">Level 1</div>
+                        </div>
+                        <h3>Fundamentals</h3>
+                        <p>Perfect for beginners! Cover the basics of programming, web development, and computer science fundamentals.</p>
+                        <div class="level-stats">
+                            <div class="stat">
+                                <i class="fas fa-question-circle"></i>
+                                <span>60 Questions</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-clock"></i>
+                                <span>~30 minutes</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-star"></i>
+                                <span>Beginner</span>
+                            </div>
+                        </div>
+                        <div class="level-topics">
+                            <span class="topic-tag">HTML/CSS</span>
+                            <span class="topic-tag">JavaScript Basics</span>
+                            <span class="topic-tag">Programming Concepts</span>
+                            <span class="topic-tag">Web Development</span>
+                        </div>
+                        <button class="btn btn-primary start-quiz-btn" data-level="fundamentals">
+                            <i class="fas fa-play"></i> Start Fundamentals Quiz
+                        </button>
+                    </div>
+
+                    <!-- Intermediate Level -->
+                    <div class="quiz-level-card glow-card" data-level="intermediate">
+                        <div class="level-header">
+                            <div class="level-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="level-badge">Level 2</div>
+                        </div>
+                        <h3>Intermediate</h3>
+                        <p>For those with some experience. Dive deeper into programming concepts, data structures, and software engineering.</p>
+                        <div class="level-stats">
+                            <div class="stat">
+                                <i class="fas fa-question-circle"></i>
+                                <span>80 Questions</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-clock"></i>
+                                <span>~45 minutes</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-star"></i>
+                                <span>Intermediate</span>
+                            </div>
+                        </div>
+                        <div class="level-topics">
+                            <span class="topic-tag">OOP Concepts</span>
+                            <span class="topic-tag">Data Structures</span>
+                            <span class="topic-tag">Databases</span>
+                            <span class="topic-tag">Software Engineering</span>
+                        </div>
+                        <button class="btn btn-primary start-quiz-btn" data-level="intermediate">
+                            <i class="fas fa-play"></i> Start Intermediate Quiz
+                        </button>
+                    </div>
+
+                    <!-- Advanced Level -->
+                    <div class="quiz-level-card glow-card" data-level="advanced">
+                        <div class="level-header">
+                            <div class="level-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="level-badge">Level 3</div>
+                        </div>
+                        <h3>Advanced</h3>
+                        <p>Expert level challenges! Test your knowledge of advanced algorithms, system design, and cutting-edge technologies.</p>
+                        <div class="level-stats">
+                            <div class="stat">
+                                <i class="fas fa-question-circle"></i>
+                                <span>60 Questions</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-clock"></i>
+                                <span>~40 minutes</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-star"></i>
+                                <span>Expert</span>
+                            </div>
+                        </div>
+                        <div class="level-topics">
+                            <span class="topic-tag">Advanced Algorithms</span>
+                            <span class="topic-tag">System Design</span>
+                            <span class="topic-tag">Cloud Computing</span>
+                            <span class="topic-tag">AI/ML</span>
+                        </div>
+                        <button class="btn btn-primary start-quiz-btn" data-level="advanced">
+                            <i class="fas fa-play"></i> Start Advanced Quiz
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="quiz-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-database"></i>
+                        <span class="stat-count">200+</span>
+                        <span class="stat-text">Questions</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <span class="stat-count">3</span>
+                        <span class="stat-text">Difficulty Levels</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <span class="stat-count">100%</span>
+                        <span class="stat-text">Free Access</span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Interface (Hidden Initially) -->
+    <section class="quiz-interface" id="quizInterface" style="display: none;">
+        <div class="container">
+            <!-- Quiz Header -->
+            <div class="quiz-header">
+                <div class="quiz-info">
+                    <div class="quiz-level-info">
+                        <span class="level-badge" id="currentLevelBadge">Level 1</span>
+                        <span class="level-name" id="currentLevelName">Fundamentals</span>
+                    </div>
+                    <div class="quiz-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <span class="progress-text" id="progressText">Question 1 of 60</span>
+                    </div>
+                </div>
+                <div class="quiz-actions">
+                    <button class="btn btn-secondary" id="pauseQuiz">
+                        <i class="fas fa-pause"></i> Pause
+                    </button>
+                    <button class="btn btn-secondary" id="exitQuiz">
+                        <i class="fas fa-times"></i> Exit
+                    </button>
+                </div>
+            </div>
+
+            <!-- Question Container -->
+            <div class="question-container">
+                <div class="question-card glow-card">
+                    <!-- Question Number & Timer -->
+                    <div class="question-header">
+                        <div class="question-number">
+                            <span id="questionNumber">1</span>
+                        </div>
+                        <div class="question-timer" id="questionTimer">
+                            <i class="fas fa-clock"></i>
+                            <span id="timerDisplay">--:--</span>
+                        </div>
+                    </div>
+
+                    <!-- Question Content -->
+                    <div class="question-content">
+                        <h3 class="question-text" id="questionText">
+                            What is the correct way to declare a variable in JavaScript?
+                        </h3>
+                        <div class="question-image" id="questionImage" style="display: none;">
+                            <!-- Code snippets or diagrams will be inserted here -->
+                        </div>
+                    </div>
+
+                    <!-- Answer Options -->
+                    <div class="answer-options" id="answerOptions">
+                        <div class="option" data-option="A">
+                            <div class="option-letter">A</div>
+                            <div class="option-text">var name = "John";</div>
+                        </div>
+                        <div class="option" data-option="B">
+                            <div class="option-letter">B</div>
+                            <div class="option-text">variable name = "John";</div>
+                        </div>
+                        <div class="option" data-option="C">
+                            <div class="option-letter">C</div>
+                            <div class="option-text">v name = "John";</div>
+                        </div>
+                        <div class="option" data-option="D">
+                            <div class="option-letter">D</div>
+                            <div class="option-text">declare name = "John";</div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="question-actions">
+                        <button class="btn btn-primary submit-answer-btn" id="submitAnswer" disabled>
+                            <i class="fas fa-check"></i> Submit Answer
+                        </button>
+                        <button class="btn btn-secondary skip-question-btn" id="skipQuestion">
+                            <i class="fas fa-forward"></i> Skip Question
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Feedback Panel (Hidden Initially) -->
+                <div class="feedback-panel glow-card" id="feedbackPanel" style="display: none;">
+                    <div class="feedback-header">
+                        <div class="feedback-icon" id="feedbackIcon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="feedback-title" id="feedbackTitle">Correct!</div>
+                    </div>
+                    <div class="feedback-content">
+                        <div class="feedback-explanation" id="feedbackExplanation">
+                            Great job! The correct syntax for declaring a variable in JavaScript is using the 'var' keyword followed by the variable name and assignment operator.
+                        </div>
+                        <div class="feedback-details">
+                            <div class="detail-item">
+                                <strong>Your Answer:</strong> <span id="userAnswer">A</span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Correct Answer:</strong> <span id="correctAnswer">A</span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Points Earned:</strong> <span id="pointsEarned">10</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feedback-actions">
+                        <button class="btn btn-primary next-question-btn" id="nextQuestion">
+                            <i class="fas fa-arrow-right"></i> Next Question
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Results (Hidden Initially) -->
+    <section class="quiz-results" id="quizResults" style="display: none;">
+        <div class="container">
+            <div class="results-container">
+                <div class="results-header">
+                    <div class="results-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h2 class="results-title">Quiz Complete!</h2>
+                    <p class="results-subtitle">Here's how you performed</p>
+                </div>
+
+                <div class="results-stats">
+                    <div class="stat-card glow-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="finalScore">85%</div>
+                            <div class="stat-label">Final Score</div>
+                        </div>
+                    </div>
+                    <div class="stat-card glow-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="correctAnswers">51</div>
+                            <div class="stat-label">Correct Answers</div>
+                        </div>
+                    </div>
+                    <div class="stat-card glow-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-times-circle"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="incorrectAnswers">9</div>
+                            <div class="stat-label">Incorrect Answers</div>
+                        </div>
+                    </div>
+                    <div class="stat-card glow-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="timeSpent">28:45</div>
+                            <div class="stat-label">Time Spent</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-actions">
+                    <button class="btn btn-primary" id="retakeQuiz">
+                        <i class="fas fa-redo"></i> Retake Quiz
+                    </button>
+                    <button class="btn btn-secondary" id="viewExplanations">
+                        <i class="fas fa-lightbulb"></i> View All Explanations
+                    </button>
+                    <button class="btn btn-secondary" id="backToSelection">
+                        <i class="fas fa-home"></i> Back to Quiz Selection
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/script.js"></script>
+    <script src="quiz/js/quiz-data.js"></script>
+    <script src="quiz/js/quiz-scoring.js"></script>
+    <script src="quiz/js/quiz-engine.js"></script>
+</body>
+
+</html>

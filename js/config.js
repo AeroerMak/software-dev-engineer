@@ -36,6 +36,12 @@ const DevLearnConfig = {
                 icon: "fas fa-code",
                 text: "Practice",
                 page: "practice"
+            },
+            {
+                href: "quiz/quiz.html",
+                icon: "fas fa-graduation-cap",
+                text: "CS Quiz",
+                page: "quiz"
             }
         ],
         cta: {
