@@ -125,13 +125,15 @@ class QuizEngine {
         const levelNames = {
             'fundamentals': 'Fundamentals',
             'intermediate': 'Intermediate', 
-            'advanced': 'Advanced'
+            'advanced': 'Advanced',
+            'software-dev': 'Software-Dev'
         };
         
         const levelNumbers = {
             'fundamentals': 'Level 1',
             'intermediate': 'Level 2',
-            'advanced': 'Level 3'
+            'advanced': 'Level 3',
+            'software-dev': 'Special'
         };
         
         document.getElementById('currentLevelBadge').textContent = levelNumbers[level];
@@ -183,6 +185,12 @@ class QuizEngine {
             console.error('Answer options container not found!');
             return;
         }
+        
+        if (!options || !Array.isArray(options)) {
+            console.error('Invalid options provided:', options);
+            return;
+        }
+        
         optionsContainer.innerHTML = '';
         
         options.forEach((option, index) => {
@@ -190,11 +198,18 @@ class QuizEngine {
             optionElement.className = 'option';
             optionElement.dataset.option = String.fromCharCode(65 + index); // A, B, C, D
             
-            optionElement.innerHTML = `
-                <div class="option-letter">${String.fromCharCode(65 + index)}</div>
-                <div class="option-text">${option}</div>
-            `;
+            // Create option letter
+            const optionLetter = document.createElement('div');
+            optionLetter.className = 'option-letter';
+            optionLetter.textContent = String.fromCharCode(65 + index);
             
+            // Create option text (use textContent to prevent HTML interpretation)
+            const optionText = document.createElement('div');
+            optionText.className = 'option-text';
+            optionText.textContent = option;
+            
+            optionElement.appendChild(optionLetter);
+            optionElement.appendChild(optionText);
             optionsContainer.appendChild(optionElement);
         });
     }
