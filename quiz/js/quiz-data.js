@@ -7,7 +7,8 @@ class QuizData {
         this.questions = {
             fundamentals: this.getFundamentalsQuestions(),
             intermediate: this.getIntermediateQuestions(),
-            advanced: this.getAdvancedQuestions()
+            advanced: this.getAdvancedQuestions(),
+            'software-dev': this.getSoftwareDevQuestions()
         };
     }
 
@@ -2559,6 +2560,557 @@ class QuizData {
                 correctAnswer: "B",
                 explanation: "Arithmetic Coding efficiently compresses text by encoding entire messages as single numbers, achieving better compression than Huffman Coding."
             }
+        ];
+    }
+
+    // ===================================
+    // Software-Dev Questions (50 questions)
+    // ===================================
+    
+    getSoftwareDevQuestions() {
+        return [
+            {
+                id: 1,
+                question: "What is the primary purpose of version control systems like Git?",
+                options: [
+                    "To compile code",
+                    "To track changes in code over time",
+                    "To debug applications",
+                    "To deploy applications"
+                ],
+                correctAnswer: "B",
+                explanation: "Version control systems like Git are designed to track changes in code over time, allowing developers to maintain a history of modifications, collaborate effectively, and revert to previous versions when needed."
+            },
+            {
+                id: 2,
+                question: "Which testing approach focuses on testing individual units or components in isolation?",
+                options: [
+                    "Integration testing",
+                    "Unit testing",
+                    "System testing",
+                    "Acceptance testing"
+                ],
+                correctAnswer: "B",
+                explanation: "Unit testing focuses on testing individual units or components of software in isolation, typically using mock objects to simulate dependencies and ensure each unit functions correctly on its own."
+            },
+            {
+                id: 3,
+                question: "What does CI/CD stand for in software development?",
+                options: [
+                    "Continuous Integration/Continuous Deployment",
+                    "Code Integration/Code Deployment",
+                    "Continuous Improvement/Continuous Development",
+                    "Central Integration/Central Deployment"
+                ],
+                correctAnswer: "A",
+                explanation: "CI/CD stands for Continuous Integration/Continuous Deployment, which are practices that automate the process of integrating code changes and deploying them to production environments."
+            },
+            {
+                id: 4,
+                question: "Which design pattern ensures that a class has only one instance?",
+                options: [
+                    "Factory Pattern",
+                    "Observer Pattern",
+                    "Singleton Pattern",
+                    "Builder Pattern"
+                ],
+                correctAnswer: "C",
+                explanation: "The Singleton pattern ensures that a class has only one instance and provides global access to that instance. It's commonly used for database connections, logging, and configuration objects."
+            },
+            {
+                id: 5,
+                question: "What is the main purpose of Docker containers?",
+                options: [
+                    "To compile code",
+                    "To package applications with their dependencies",
+                    "To debug applications",
+                    "To write documentation"
+                ],
+                correctAnswer: "B",
+                explanation: "Docker containers package applications with all their dependencies, ensuring consistent behavior across different environments and making deployment more reliable and portable."
+            },
+            {
+                id: 6,
+                question: "Which methodology emphasizes iterative development and frequent customer feedback?",
+                options: [
+                    "Waterfall",
+                    "Agile",
+                    "Spiral",
+                    "V-Model"
+                ],
+                correctAnswer: "B",
+                explanation: "Agile methodology emphasizes iterative development, frequent customer feedback, and adaptive planning. It focuses on delivering working software in short iterations and responding to change."
+            },
+            {
+                id: 7,
+                question: "What is the primary goal of code refactoring?",
+                options: [
+                    "To add new features",
+                    "To improve code structure without changing functionality",
+                    "To fix bugs",
+                    "To optimize performance"
+                ],
+                correctAnswer: "B",
+                explanation: "Code refactoring aims to improve the internal structure, readability, and maintainability of code without changing its external behavior or functionality."
+            },
+            {
+                id: 8,
+                question: "Which tool is commonly used for automated testing in JavaScript projects?",
+                options: [
+                    "Jest",
+                    "Webpack",
+                    "Babel",
+                    "ESLint"
+                ],
+                correctAnswer: "A",
+                explanation: "Jest is a popular JavaScript testing framework that provides a complete testing solution with built-in mocking, assertions, and test runners for JavaScript applications."
+            },
+            {
+                id: 9,
+                question: "What does API stand for in software development?",
+                options: [
+                    "Application Programming Interface",
+                    "Automated Program Integration",
+                    "Advanced Programming Interface",
+                    "Application Process Integration"
+                ],
+                correctAnswer: "A",
+                explanation: "API stands for Application Programming Interface, which defines how different software components should interact and communicate with each other."
+            },
+            {
+                id: 10,
+                question: "Which principle states that software entities should be open for extension but closed for modification?",
+                options: [
+                    "Single Responsibility Principle",
+                    "Open/Closed Principle",
+                    "Liskov Substitution Principle",
+                    "Interface Segregation Principle"
+                ],
+                correctAnswer: "B",
+                explanation: "The Open/Closed Principle states that software entities (classes, modules, functions) should be open for extension but closed for modification, promoting code reusability and maintainability."
+            },
+            {
+                id: 11,
+                question: "Which of the following roles does NOT belong to Scrum methodology?",
+                options: [
+                    "Scrum Master",
+                    "Product Owner",
+                    "Stakeholder",
+                    "System Architect"
+                ],
+                correctAnswer: "D",
+                explanation: "Scrum has only three official roles — Product Owner, Scrum Master, and Development Team. System Architect is not part of Scrum roles."
+            },
+            {
+                id: 12,
+                question: "During beta testing, ___________ are most likely to report software bugs.",
+                options: [
+                    "Developers",
+                    "Test Engineers",
+                    "End Users",
+                    "Project Managers"
+                ],
+                correctAnswer: "C",
+                explanation: "Beta testing involves real users testing the product in real-world conditions to identify any remaining issues."
+            },
+            {
+                id: 13,
+                question: "Which of the following statements best describes encapsulation in Python?",
+                options: [
+                    "Combining data and methods into a single unit",
+                    "Deriving new classes from base classes",
+                    "Defining functions outside a class",
+                    "Using global variables"
+                ],
+                correctAnswer: "A",
+                explanation: "Encapsulation in OOP means bundling data and functions that operate on that data into one unit (class), restricting direct access."
+            },
+            {
+                id: 14,
+                question: "How can you create an immutable object in Python?",
+                options: [
+                    "Using a tuple",
+                    "Using a list",
+                    "Using a set",
+                    "Using a dictionary"
+                ],
+                correctAnswer: "A",
+                explanation: "Tuples in Python are immutable, meaning their elements cannot be changed after creation."
+            },
+            {
+                id: 15,
+                question: "What will happen if you modify a list while iterating over it in Python?",
+                options: [
+                    "Error",
+                    "It may cause unexpected behavior",
+                    "It will restart the loop",
+                    "It automatically adjusts"
+                ],
+                correctAnswer: "B",
+                explanation: "Modifying a list while iterating can skip elements or cause incorrect iteration."
+            },
+            {
+                id: 16,
+                question: "In Agile methodology, what is the typical duration of a sprint?",
+                options: [
+                    "1-4 weeks",
+                    "2-6 months",
+                    "1 day",
+                    "6-12 weeks"
+                ],
+                correctAnswer: "A",
+                explanation: "A sprint is a time-boxed period during which specific work has to be completed — usually 1 to 4 weeks."
+            },
+            {
+                id: 17,
+                question: "What will `sorted([3, 1, 2], reverse=True)` return?",
+                options: [
+                    "[1, 2, 3]",
+                    "[3, 2, 1]",
+                    "[2, 1, 3]",
+                    "Error"
+                ],
+                correctAnswer: "B",
+                explanation: "reverse=True sorts in descending order."
+            },
+            {
+                id: 18,
+                question: "Which of the following data structures maintains insertion order in Python 3.7+?",
+                options: [
+                    "Set",
+                    "Dictionary",
+                    "Tuple",
+                    "Frozen set"
+                ],
+                correctAnswer: "B",
+                explanation: "Starting from Python 3.7, dictionaries preserve insertion order by default."
+            },
+            {
+                id: 19,
+                question: "What will be the result of `bool('False')` in Python?",
+                options: [
+                    "True",
+                    "False",
+                    "Error",
+                    "None"
+                ],
+                correctAnswer: "A",
+                explanation: "Non-empty strings are always True in Python, even if the content is 'False'."
+            },
+            {
+                id: 20,
+                question: "What does the `@staticmethod` decorator do in Python?",
+                options: [
+                    "Creates an abstract method",
+                    "Defines a method that belongs to the class, not instance",
+                    "Prevents inheritance",
+                    "Makes method private"
+                ],
+                correctAnswer: "B",
+                explanation: "A static method doesn't require an instance and can be called directly using the class name."
+            },
+            {
+                id: 21,
+                question: "Which of the following is NOT a valid Python data structure?",
+                options: [
+                    "List",
+                    "Stack",
+                    "Tuple",
+                    "Dictionary"
+                ],
+                correctAnswer: "B",
+                explanation: "Stack is a concept, not a built-in Python data structure (though it can be implemented using lists)."
+            },
+            {
+                id: 22,
+                question: "What is the primary purpose of a code review?",
+                options: [
+                    "To compile the code",
+                    "To improve code quality and catch bugs",
+                    "To deploy the application",
+                    "To write documentation"
+                ],
+                correctAnswer: "B",
+                explanation: "Code reviews help improve code quality, catch bugs early, share knowledge among team members, and ensure coding standards are followed."
+            },
+            {
+                id: 23,
+                question: "Which testing level focuses on testing the entire system as a whole?",
+                options: [
+                    "Unit testing",
+                    "Integration testing",
+                    "System testing",
+                    "Acceptance testing"
+                ],
+                correctAnswer: "C",
+                explanation: "System testing evaluates the complete integrated system to verify that it meets specified requirements and works correctly as a whole."
+            },
+            {
+                id: 24,
+                question: "What does 'DRY' stand for in software development?",
+                options: [
+                    "Don't Repeat Yourself",
+                    "Data Retrieval and Yield",
+                    "Dynamic Resource Management",
+                    "Database Relationship Yield"
+                ],
+                correctAnswer: "A",
+                explanation: "DRY (Don't Repeat Yourself) is a principle that aims to reduce repetition of code patterns, making code more maintainable and less error-prone."
+            },
+            {
+                id: 25,
+                question: "Which keyword is used to define a class in Python?",
+                options: [
+                    "class",
+                    "def",
+                    "struct",
+                    "object"
+                ],
+                correctAnswer: "A",
+                explanation: "The 'class' keyword is used to define a class in Python, followed by the class name and a colon."
+            },
+            {
+                id: 26,
+                question: "What is the main advantage of using microservices architecture?",
+                options: [
+                    "Simpler deployment",
+                    "Better scalability and independent deployment",
+                    "Lower memory usage",
+                    "Faster compilation"
+                ],
+                correctAnswer: "B",
+                explanation: "Microservices architecture allows for better scalability, independent deployment of services, and technology diversity across different services."
+            },
+            {
+                id: 27,
+                question: "Which method is used to add an element to the end of a list in Python?",
+                options: [
+                    "append()",
+                    "add()",
+                    "insert()",
+                    "push()"
+                ],
+                correctAnswer: "A",
+                explanation: "The append() method adds a single element to the end of a list in Python."
+            },
+            {
+                id: 28,
+                question: "What is the purpose of a database index?",
+                options: [
+                    "To store data",
+                    "To improve query performance",
+                    "To backup data",
+                    "To encrypt data"
+                ],
+                correctAnswer: "B",
+                explanation: "Database indexes improve query performance by providing faster access to data, similar to an index in a book."
+            },
+            {
+                id: 29,
+                question: "Which HTTP method is typically used to retrieve data from a server?",
+                options: [
+                    "POST",
+                    "PUT",
+                    "GET",
+                    "DELETE"
+                ],
+                correctAnswer: "C",
+                explanation: "The GET method is used to retrieve data from a server. It's the most common HTTP method for reading data."
+            },
+            {
+                id: 30,
+                question: "What does 'API' stand for in web development?",
+                options: [
+                    "Application Programming Interface",
+                    "Advanced Programming Integration",
+                    "Automated Process Interface",
+                    "Application Process Integration"
+                ],
+                correctAnswer: "A",
+                explanation: "API stands for Application Programming Interface, which defines how different software components should interact and communicate."
+            },
+            {
+                id: 31,
+                question: "What is the primary purpose of a constructor in object-oriented programming?",
+                options: [
+                    "To destroy objects",
+                    "To initialize objects when they are created",
+                    "To inherit from parent classes",
+                    "To override methods"
+                ],
+                correctAnswer: "B",
+                explanation: "A constructor is a special method that initializes objects when they are created, setting up initial values and performing setup tasks."
+            },
+            {
+                id: 32,
+                question: "Which testing technique involves testing with invalid or unexpected inputs?",
+                options: [
+                    "Positive testing",
+                    "Negative testing",
+                    "Unit testing",
+                    "Integration testing"
+                ],
+                correctAnswer: "B",
+                explanation: "Negative testing involves testing with invalid, unexpected, or edge case inputs to ensure the system handles errors gracefully."
+            },
+            {
+                id: 33,
+                question: "What does 'SOLID' represent in software design principles?",
+                options: [
+                    "Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion",
+                    "Simple, Organized, Logical, Integrated, Dynamic",
+                    "Structured, Optimized, Layered, Independent, Distributed",
+                    "Secure, Object-oriented, Lightweight, Intelligent, Decoupled"
+                ],
+                correctAnswer: "A",
+                explanation: "SOLID represents five object-oriented design principles: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion."
+            },
+            {
+                id: 34,
+                question: "Which Python data type is mutable?",
+                options: [
+                    "Tuple",
+                    "String",
+                    "List",
+                    "Frozen set"
+                ],
+                correctAnswer: "C",
+                explanation: "Lists are mutable in Python, meaning their elements can be changed after creation. Tuples, strings, and frozen sets are immutable."
+            },
+            {
+                id: 35,
+                question: "What is the main purpose of version control branching?",
+                options: [
+                    "To backup code",
+                    "To work on features independently without affecting main code",
+                    "To compile code",
+                    "To deploy applications"
+                ],
+                correctAnswer: "B",
+                explanation: "Branching allows developers to work on features independently, experiment with changes, and merge them back to the main codebase when ready."
+            },
+            {
+                id: 36,
+                question: "Which HTTP status code indicates a successful request?",
+                options: [
+                    "200",
+                    "400",
+                    "404",
+                    "500"
+                ],
+                correctAnswer: "A",
+                explanation: "HTTP status code 200 indicates a successful request. 400 indicates bad request, 404 means not found, and 500 indicates server error."
+            },
+            {
+                id: 37,
+                question: "What is the primary goal of refactoring?",
+                options: [
+                    "To add new features",
+                    "To improve code structure without changing functionality",
+                    "To fix bugs",
+                    "To optimize performance"
+                ],
+                correctAnswer: "B",
+                explanation: "Refactoring aims to improve code structure, readability, and maintainability without changing the external behavior or functionality of the code."
+            },
+            {
+                id: 38,
+                question: "Which method is used to remove an element from a list by value in Python?",
+                options: [
+                    "remove()",
+                    "delete()",
+                    "pop()",
+                    "clear()"
+                ],
+                correctAnswer: "A",
+                explanation: "The remove() method removes the first occurrence of a specified value from a list. pop() removes by index, and clear() removes all elements."
+            },
+            {
+                id: 39,
+                question: "What does 'TDD' stand for in software development?",
+                options: [
+                    "Test-Driven Development",
+                    "Total Design Documentation",
+                    "Technical Design Document",
+                    "Test Data Development"
+                ],
+                correctAnswer: "A",
+                explanation: "TDD stands for Test-Driven Development, a methodology where tests are written before the actual code, driving the development process."
+            },
+            {
+                id: 40,
+                question: "Which design pattern provides a single point of access to a resource?",
+                options: [
+                    "Factory Pattern",
+                    "Observer Pattern",
+                    "Singleton Pattern",
+                    "Builder Pattern"
+                ],
+                correctAnswer: "C",
+                explanation: "The Singleton pattern ensures that a class has only one instance and provides global access to that instance, creating a single point of access."
+            },
+            {
+                id: 41,
+                question: "What is the purpose of a database foreign key?",
+                options: [
+                    "To encrypt data",
+                    "To establish relationships between tables",
+                    "To improve performance",
+                    "To backup data"
+                ],
+                correctAnswer: "B",
+                explanation: "A foreign key establishes relationships between tables by referencing the primary key of another table, ensuring referential integrity."
+            },
+            {
+                id: 42,
+                question: "Which Python keyword is used to handle exceptions?",
+                options: [
+                    "try",
+                    "catch",
+                    "error",
+                    "exception"
+                ],
+                correctAnswer: "A",
+                explanation: "The 'try' keyword is used to start a block of code that might raise exceptions, which can then be handled with 'except' blocks."
+            },
+            {
+                id: 43,
+                question: "What is the main advantage of using a framework in web development?",
+                options: [
+                    "Faster compilation",
+                    "Pre-built components and standardized practices",
+                    "Lower memory usage",
+                    "Simpler syntax"
+                ],
+                correctAnswer: "B",
+                explanation: "Frameworks provide pre-built components, standardized practices, and common functionality, reducing development time and ensuring best practices."
+            },
+            {
+                id: 44,
+                question: "Which testing approach tests individual components in isolation?",
+                options: [
+                    "Integration testing",
+                    "System testing",
+                    "Unit testing",
+                    "Acceptance testing"
+                ],
+                correctAnswer: "C",
+                explanation: "Unit testing tests individual components or units of code in isolation, typically using mock objects to simulate dependencies."
+            },
+            {
+                id: 45,
+                question: "What does 'REST' stand for in web services?",
+                options: [
+                    "Representational State Transfer",
+                    "Remote Execution and State Transfer",
+                    "Resource Exchange and State Transfer",
+                    "Rapid Execution and State Transfer"
+                ],
+                correctAnswer: "A",
+                explanation: "REST stands for Representational State Transfer, an architectural style for designing networked applications using HTTP methods."
+            }
+            // Note: You can add more Software-Dev questions here
+            // I've provided 45 sample questions to get you started
         ];
     }
 }
