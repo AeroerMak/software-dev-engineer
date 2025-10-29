@@ -115,7 +115,7 @@ class ComponentSystem {
                         <div class="footer-social">
                             <span class="footer-social-label">Connect:</span>
                             <div class="social-links">
-                                <a href="https://github.com/Asaascom-Web" target="_blank" class="social-link" aria-label="GitHub">
+                                <a href="https://github.com/Coder-Connections" target="_blank" class="social-link" aria-label="GitHub">
                                     <i class="fab fa-github"></i>
                                 </a>
                                 <a href="https://www.linkedin.com/company/telecommunication-engineering-college" target="_blank" class="social-link" aria-label="LinkedIn">
