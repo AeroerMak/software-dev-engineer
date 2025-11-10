@@ -56,6 +56,10 @@ class ComponentSystem {
                             <i class="fas fa-desktop"></i>
                             <span>WebApp</span>
                         </a></li>
+                        <li><a href="assignments.html" class="nav-link ${this.getCurrentPage() === 'assignments' ? 'active' : ''}">
+                            <i class="fas fa-clipboard-check"></i>
+                            <span>Assignments</span>
+                        </a></li>
                         <li><a href="quiz.html" class="nav-link ${this.getCurrentPage() === 'quiz' ? 'active' : ''}">
                             <i class="fas fa-database"></i>
                             <span>Exam</span>

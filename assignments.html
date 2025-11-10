@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skill assessment assignments designed to help students gain real-world software development experience.">
+    <title>Skill Assessment Assignments | DevLearn</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/assignments.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Particle Canvas Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Floating Dev Icons -->
+    <div class="floating-icons" id="floatingIcons"></div>
+
+    <!-- Dynamic Header -->
+    <div id="header-placeholder"></div>
+
+    <main class="assignments-wrapper">
+        <!-- Hero Section -->
+        <section class="assignments-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fas fa-users-cog"></i>
+                        <span>Team-Oriented Skill Building</span>
+                    </div>
+                    <h1 class="hero-title">Student Skill Assessment Assignments</h1>
+                    <p class="hero-description">
+                        Real-world assignments designed to strengthen teamwork, project execution, developer lifecycle understanding, time management, and deployment workflows with GitHub and cloud servers.
+                    </p>
+                    <div class="hero-meta">
+                        <div class="meta-item"><i class="fas fa-calendar-alt"></i> 6 active assignments</div>
+                        <div class="meta-item"><i class="fas fa-users"></i> Solo & group scenarios</div>
+                        <div class="meta-item"><i class="fas fa-toolbox"></i> Full-stack tooling exposure</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Assignment Categories Overview -->
+        <section class="assignment-categories">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title glow-text"><i class="fas fa-diagram-project"></i> Assignment Tracks</h2>
+                    <p class="section-subtitle">Choose assignments that align with your current focus area. Each track is mapped to real development team responsibilities.</p>
+                </div>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <i class="fas fa-people-arrows"></i>
+                        <h3>Teamwork & Collaboration</h3>
+                        <p>Scrum rituals, sprint planning, and collaborative delivery playbooks.</p>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-project-diagram"></i>
+                        <h3>Project Execution</h3>
+                        <p>Delivery-driven assignments with stakeholder checkpoints and demos.</p>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-recycle"></i>
+                        <h3>Developer Lifecycle</h3>
+                        <p>Issue tracking, review workflows, CI pipelines, and release cycles.</p>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-hourglass-half"></i>
+                        <h3>Time Management</h3>
+                        <p>Time-boxed challenges with clear acceptance criteria and retrospectives.</p>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-code-branch"></i>
+                        <h3>GitHub & Servers</h3>
+                        <p>Repository hygiene, pull requests, deployments, and server operations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Assignment Details -->
+        <section class="assignments-list">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title glow-text"><i class="fas fa-check-double"></i> Active Assessment Assignments</h2>
+                    <p class="section-subtitle">Assignments are ordered by increasing complexity. Deadlines are suggested — instructors may adjust according to cohort progress.</p>
+                </div>
+
+                <div class="assignment-filter" role="tablist" aria-label="Assignment filter">
+                    <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Assignments</button>
+                    <button class="filter-btn" data-filter="solo" role="tab" aria-selected="false">Solo Project</button>
+                    <button class="filter-btn" data-filter="team" role="tab" aria-selected="false">Team Assignments</button>
+                    <button class="filter-btn" data-filter="final" role="tab" aria-selected="false">Final Assignment</button>
+                </div>
+
+                <div class="assignment-grid">
+                    <!-- Assignment 1 -->
+                    <article class="assignment-card" data-category="solo">
+                        <div class="card-badge build"><i class="fas fa-user-astronaut"></i> Solo Launch (Days 1-3)</div>
+                        <h3>Personal Portfolio Deployment Challenge</h3>
+                        <p class="assignment-summary">Design, build, and deploy a dynamic developer portfolio that highlights your skills, showcases projects, and demonstrates production readiness.</p>
+                        <ul class="assignment-meta">
+                            <li><i class="fas fa-microchip"></i> Technologies: HTML, CSS, JavaScript</li>
+                            <li><i class="fas fa-clock"></i> Submission: Live cloud URL + GitHub repository link + README walkthrough.</li>
+                            <li><i class="fas fa-users"></i> Team Guidelines: Solo assignment. Document daily progress and deployment notes inside the repository README.</li>
+                        </ul>
+                        <div class="assignment-focus">
+                            <span class="focus-tag">Project Execution</span>
+                            <span class="focus-tag">GitHub Workflow</span>
+                        </div>
+                    </article>
+
+                    <!-- Assignment 2 -->
+                    <article class="assignment-card" data-category="solo">
+                        <div class="card-badge presentation"><i class="fas fa-feather-alt"></i> Reflection Journey</div>
+                        <h3>Developer Narrative Blog Site</h3>
+                        <p class="assignment-summary">Craft a blog-style website to showcase project write-ups, capture learning reflections, and share improvement ideas that demonstrate growth over time.</p>
+                        <ul class="assignment-meta">
+                            <li><i class="fas fa-microchip"></i> Technologies: Python (Flask/Django or static generator), HTML, CSS</li>
+                            <li><i class="fas fa-clock"></i> Submission: GitHub repository with deployment instructions or live preview link, plus README summarizing featured posts.</li>
+                            <li><i class="fas fa-users"></i> Team Guidelines: Solo assignment. Publish at least three entries covering project highlights, lessons learned, and future enhancements.</li>
+                        </ul>
+                        <div class="assignment-focus">
+                            <span class="focus-tag">Project Execution</span>
+                            <span class="focus-tag">Reflection</span>
+                            <span class="focus-tag">Content Design</span>
+                        </div>
+                    </article>
+
+                    <!-- Assignment 3 -->
+                    <article class="assignment-card" data-category="team">
+                        <div class="card-badge research"><i class="fas fa-robot"></i> AI Collaboration Lab</div>
+                        <h3>LLM Chat Experience Accelerator</h3>
+                        <p class="assignment-summary">Build a collaborative AI chat experience that combines a modern interface with a production-ready LLM integration and clear API ownership.</p>
+                        <ul class="assignment-meta">
+                            <li><i class="fas fa-microchip"></i> Technologies: Teams choose from React JS, JavaScript (Node/Express), or Python (FastAPI/Flask) via the skills survey; instructor may assign the final stack based on performance.</li>
+                            <li><i class="fas fa-clock"></i> Submission: GitHub repository with architecture diagram, API reference notes, deployment checklist, and recorded demo of the chat flow.</li>
+                            <li><i class="fas fa-users"></i> Team Guidelines: 3-4 students. Assign roles (API lead, UI/UX lead, Integrations, QA storyteller), run two checkpoint reviews, and document key decisions.</li>
+                        </ul>
+                        <div class="assignment-focus">
+                            <span class="focus-tag">Teamwork</span>
+                            <span class="focus-tag">APIs</span>
+                            <span class="focus-tag">Lifecycle</span>
+                        </div>
+                    </article>
+
+                    <!-- Assignment 4 -->
+                    <article class="assignment-card" data-category="team">
+                        <div class="card-badge operations"><i class="fas fa-video"></i> Streaming Delivery Sprint</div>
+                        <h3>Cloud Video Platform Build</h3>
+                        <p class="assignment-summary">Design a team-owned video streaming web app with cloud-first architecture, secure APIs, and a polished viewing experience for end users.</p>
+                        <ul class="assignment-meta">
+                            <li><i class="fas fa-microchip"></i> Technologies: React / Next.js for UI, Node.js or Python services, cloud databases (Firestore, Supabase, or DynamoDB), object storage (S3/Bucket), HLS video delivery, Auth libraries.</li>
+                            <li><i class="fas fa-clock"></i> Submission: GitHub repository with infrastructure diagram, API specification, authentication flow notes, and recorded product tour of the streaming experience.</li>
+                            <li><i class="fas fa-users"></i> Team Guidelines: 3-4 students. Assign roles (Cloud architect, API engineer, UI/UX lead, QA & release). Implement basic login/auth and document database schema, API endpoints, and streaming pipeline.</li>
+                        </ul>
+                        <div class="assignment-focus">
+                            <span class="focus-tag">Servers</span>
+                            <span class="focus-tag">APIs</span>
+                            <span class="focus-tag">Teamwork</span>
+                        </div>
+                    </article>
+
+                    <!-- Assignment 5 -->
+                    <article class="assignment-card" data-category="team">
+                        <div class="card-badge research"><i class="fas fa-database"></i> Data Ops Studio</div>
+                        <h3>Cloud Data Intake System</h3>
+                        <p class="assignment-summary">Create a secure data-collection application that captures user input, persists it to a managed cloud database, and exposes an API for downstream consumption.</p>
+                        <ul class="assignment-meta">
+                            <li><i class="fas fa-microchip"></i> Technologies: Python (FastAPI/Flask) or JavaScript (Node.js/Express) services, cloud databases (Firestore, Supabase, DynamoDB, or Mongo Atlas), REST/GraphQL API, modern UI framework.</li>
+                            <li><i class="fas fa-clock"></i> Submission: GitHub repository with ER/data-structure diagram, API specification, seed data scripts, and demo walkthrough video.</li>
+                            <li><i class="fas fa-users"></i> Team Guidelines: 3-4 students. Assign roles (Data steward, API engineer, UI lead, QA). Implement validation, basic auth, and capture consents/audit logs in documentation.</li>
+                        </ul>
+                        <div class="assignment-focus">
+                            <span class="focus-tag">Cloud</span>
+                            <span class="focus-tag">Data</span>
+                            <span class="focus-tag">Teamwork</span>
+                        </div>
+                    </article>
+
+                    <!-- Assignment 6 -->
+                    <article class="assignment-card" data-category="final">
+                        <div class="card-badge build"><i class="fas fa-tasks"></i> Final Assessment 01</div>
+                        <h3>TaskFlow Full-Stack Adaptation</h3>
+                        <p class="assignment-summary">Review the supplied task management platform and engineer your own production-ready variant that expands on the core workflows and improves developer experience.</p>
+                        <ul class="assignment-meta">
+                            <li><i class="fas fa-microchip"></i> Technologies: Follow the reference stack (frontend framework, backend services, database, auth) as a baseline, then layer in automation, analytics, or integrations of your choice.</li>
+                            <li><i class="fas fa-clock"></i> Submission: GitHub repository with your adapted code, infrastructure/deployment notes, and a Loom-style demo highlighting key flows and architectural upgrades.</li>
+                            <li><i class="fas fa-users"></i> Team Guidelines: Final assessment. Lead solo or with a small strike team; record architectural decisions, risk mitigations, and rollout/rollback plans in the README.</li>
+                        </ul>
+                        <div class="assignment-focus">
+                            <span class="focus-tag">Project Execution</span>
+                            <span class="focus-tag">Lifecycle</span>
+                            <span class="focus-tag">Final Assessment</span>
+                        </div>
+                    </article>
+
+                    <!-- Assignment 7 -->
+                    <article class="assignment-card" data-category="final">
+                        <div class="card-badge operations"><i class="fas fa-note-sticky"></i> Final Assessment 02</div>
+                        <h3>CloudSync Notes Workspace</h3>
+                        <p class="assignment-summary">Study the provided note-taking application codebase, then ship your own secure, cloud-enabled version with robust authentication, logging, and multi-device synchronization.</p>
+                        <ul class="assignment-meta">
+                            <li><i class="fas fa-microchip"></i> Technologies: Reuse the reference stack (UI layer, API services, database, auth provider, cloud storage) and enhance it with improved schema design, sync conflict handling, and observability.</li>
+                            <li><i class="fas fa-clock"></i> Submission: GitHub repository showcasing your implementation, deployment link or runbook, and README detailing auth flows, sync strategy, and logging/audit trails.</li>
+                            <li><i class="fas fa-users"></i> Team Guidelines: Final assessment. Execute individually or with a compact team; document security considerations, cloud monitoring setup, and incident response checklist.</li>
+                        </ul>
+                        <div class="assignment-focus">
+                            <span class="focus-tag">Authentication</span>
+                            <span class="focus-tag">Cloud Sync</span>
+                            <span class="focus-tag">Final Assessment</span>
+                        </div>
+                    </article>
+
+
+                    <!-- Assignment 8 -->
+                    <article class="assignment-card" data-category="final">
+                        <div class="card-badge presentation"><i class="fas fa-chart-line"></i> Final Assessment 03</div>
+                        <h3>SEO Infrastructure Optimization Challenge</h3>
+                        <p class="assignment-summary">Audit the provided production web system and deliver an optimized version with performant infrastructure, crawl-ready architecture, and measurable SEO gains.</p>
+                        <ul class="assignment-meta">
+                            <li><i class="fas fa-microchip"></i> Technologies: Work within the supplied codebase stack (framework, build tooling, hosting) and enhance it using SEO tooling, performance profiling, and deployment improvements.</li>
+                            <li><i class="fas fa-clock"></i> Submission: GitHub repository documenting your optimizations, lighthouse/SEO reports, and a README outlining technical changes, metrics before/after, and deployment instructions.</li>
+                            <li><i class="fas fa-users"></i> Team Guidelines: Final assessment. Lead individually or with a micro-team; capture infrastructure diagrams, monitoring dashboards, and optimization checklist sign-off.</li>
+                        </ul>
+                        <div class="assignment-focus">
+                            <span class="focus-tag">SEO</span>
+                            <span class="focus-tag">Performance</span>
+                            <span class="focus-tag">Final Assessment</span>
+                        </div>
+                    </article>
+
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Submission & Support Section -->
+        <section class="submission-support">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title glow-text"><i class="fas fa-route"></i> Submission Workflow & Support</h2>
+                    <p class="section-subtitle">Follow the workflow below to ensure your assignments are reviewed quickly and professionally.</p>
+                </div>
+                <div class="workflow-grid">
+                    <div class="workflow-step">
+                        <span class="step-number">01</span>
+                        <h3>Plan & Align</h3>
+                        <p>Review assignment brief, align roles, and confirm timelines in your team contract document.</p>
+                    </div>
+                    <div class="workflow-step">
+                        <span class="step-number">02</span>
+                        <h3>Execute & Document</h3>
+                        <p>Maintain daily updates in GitHub Projects or your team workspace. Provide screenshots, metrics, and decision logs.</p>
+                    </div>
+                    <div class="workflow-step">
+                        <span class="step-number">03</span>
+                        <h3>Submit & Demo</h3>
+                        <p>Submit via the assignment submission form with GitHub links, deployment URLs, and Loom demos. Be ready for live Q&A.</p>
+                    </div>
+                    <div class="workflow-step">
+                        <span class="step-number">04</span>
+                        <h3>Reflect & Improve</h3>
+                        <p>Complete the retrospective template within 48 hours of feedback to capture lessons learned and next steps.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section class="assignment-resources">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title glow-text"><i class="fas fa-toolbox"></i> Resources & Templates</h2>
+                    <p class="section-subtitle">Use the following resources to accelerate your planning, execution, and retrospective cycles.</p>
+                </div>
+                <div class="resource-grid">
+                    <a href="https://www.atlassian.com/software/jira" target="_blank" class="resource-card">
+                        <i class="fas fa-clipboard-list"></i>
+                        <h3>Sprint Planning Toolkit</h3>
+                        <p>Templates for sprint goals, stand-up notes, and retrospective prompts.</p>
+                    </a>
+                    <a href="https://www.github.com" target="_blank" class="resource-card">
+                        <i class="fab fa-github"></i>
+                        <h3>GitHub Workflow Guidelines</h3>
+                        <p>Branching strategies, PR review checklist, and release cadence examples.</p>
+                    </a>
+                    <a href="https://docusaurus.io/docs/cli" target="_blank" class="resource-card">
+                        <i class="fas fa-file-alt"></i>
+                        <h3>Incident Report Template</h3>
+                        <p>Blameless post-mortem structure with root-cause analysis workflow.</p>
+                    </a>
+                    <a href="https://grafana.com/" target="_blank" class="resource-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Monitoring Playbook</h3>
+                        <p>Dashboard setup checklist, alerting guidelines, and escalation matrix.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Dynamic Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/config.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/assignments.js"></script>
+</body>
+
+</html>
