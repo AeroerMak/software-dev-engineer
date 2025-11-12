@@ -126,14 +126,16 @@ class QuizEngine {
             'fundamentals': 'Fundamentals',
             'intermediate': 'Intermediate', 
             'advanced': 'Advanced',
-            'software-dev': 'Software-Dev'
+            'software-dev': 'Software-Dev',
+            'software-dev-python': 'SDS Foundation (Python)'
         };
         
         const levelNumbers = {
             'fundamentals': 'Level 1',
             'intermediate': 'Level 2',
             'advanced': 'Level 3',
-            'software-dev': 'Special'
+            'software-dev': 'Special',
+            'software-dev-python': 'Foundation'
         };
         
         document.getElementById('currentLevelBadge').textContent = levelNumbers[level];
@@ -162,11 +164,36 @@ class QuizEngine {
         
         // Display question image if available
         const questionImage = document.getElementById('questionImage');
+        const questionCode = document.getElementById('questionCode');
+        
         if (question.image) {
             questionImage.innerHTML = `<img src="${question.image}" alt="Question illustration" style="max-width: 100%; height: auto;">`;
             questionImage.style.display = 'block';
+            if (questionCode) {
+                questionCode.style.display = 'none';
+                questionCode.innerHTML = '';
+            }
+        } else if (questionCode && Array.isArray(question.codeSnippet) && question.codeSnippet.length > 0) {
+            const pre = document.createElement('pre');
+            pre.className = 'question-code-block';
+            
+            const codeElement = document.createElement('code');
+            codeElement.textContent = question.codeSnippet.join('\n');
+            
+            pre.appendChild(codeElement);
+            
+            questionCode.innerHTML = '';
+            questionCode.appendChild(pre);
+            questionCode.style.display = 'block';
+            questionImage.style.display = 'none';
+            questionImage.innerHTML = '';
         } else {
             questionImage.style.display = 'none';
+            questionImage.innerHTML = '';
+            if (questionCode) {
+                questionCode.style.display = 'none';
+                questionCode.innerHTML = '';
+            }
         }
         
         // Display answer options

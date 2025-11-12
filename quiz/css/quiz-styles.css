@@ -293,6 +293,30 @@
     text-align: center;
 }
 
+.question-code {
+    background: var(--bg-emphasis);
+    border: 1px solid var(--border-default);
+    border-radius: 8px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.question-code-block {
+    margin: 0;
+    padding: 20px;
+    background: rgba(10, 14, 23, 0.95);
+    color: var(--text-primary);
+    font-family: 'Fira Code', 'Source Code Pro', monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.question-code-block code {
+    display: block;
+}
+
 .answer-options {
     display: grid;
     gap: 16px;

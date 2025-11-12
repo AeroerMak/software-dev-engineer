@@ -57,7 +57,7 @@
                         <div class="level-stats">
                             <div class="stat">
                                 <i class="fas fa-question-circle"></i>
-                                <span>60 Questions</span>
+                                <span>81 Questions</span>
                             </div>
                             <div class="stat">
                                 <i class="fas fa-clock"></i>
@@ -162,7 +162,7 @@
                         <div class="level-stats">
                             <div class="stat">
                                 <i class="fas fa-question-circle"></i>
-                                <span>45 Questions</span>
+                                <span>60 Questions</span>
                             </div>
                             <div class="stat">
                                 <i class="fas fa-clock"></i>
@@ -183,6 +183,41 @@
                             <i class="fas fa-play"></i> Start Software-Dev Quiz
                         </button>
                     </div>
+
+                    <!-- Software Development Skills Foundation (Python) -->
+                    <div class="quiz-level-card glow-card" data-level="software-dev-python">
+                        <div class="level-header">
+                            <div class="level-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="level-badge">Foundation</div>
+                        </div>
+                        <h3>Software Development Skills Foundation (Python)</h3>
+                        <p>Build a solid Python foundation with hands-on questions focused on core language features and practical software development workflows.</p>
+                        <div class="level-stats">
+                            <div class="stat">
+                                <i class="fas fa-question-circle"></i>
+                                <span>81 Questions</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-clock"></i>
+                                <span>~25 minutes</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-star"></i>
+                                <span>Foundation</span>
+                            </div>
+                        </div>
+                        <div class="level-topics">
+                            <span class="topic-tag">Python Syntax</span>
+                            <span class="topic-tag">Problem Solving</span>
+                            <span class="topic-tag">Automation</span>
+                            <span class="topic-tag">Best Practices</span>
+                        </div>
+                        <button class="btn btn-primary start-quiz-btn" data-level="software-dev-python">
+                            <i class="fas fa-play"></i> Start Python Foundation Quiz
+                        </button>
+                    </div>
                 </div>
 
                 <!-- Quick Stats -->
@@ -194,7 +229,7 @@
                     </div>
                     <div class="stat-item">
                         <i class="fas fa-users"></i>
-                        <span class="stat-count">4</span>
+                        <span class="stat-count">5</span>
                         <span class="stat-text">Quiz Categories</span>
                     </div>
                     <div class="stat-item">
@@ -255,6 +290,9 @@
                         </h3>
                         <div class="question-image" id="questionImage" style="display: none;">
                             <!-- Code snippets or diagrams will be inserted here -->
+                        </div>
+                        <div class="question-code" id="questionCode" style="display: none;">
+                            <!-- Code examples will be rendered here -->
                         </div>
                     </div>
 
@@ -396,6 +434,7 @@
     <script src="js/config.js"></script>
     <script src="js/components.js"></script>
     <script src="js/script.js"></script>
+    <script src="quiz/js/quiz-software-dev-python.js"></script>
     <script src="quiz/js/quiz-data.js"></script>
     <script src="quiz/js/quiz-scoring.js"></script>
     <script src="quiz/js/quiz-engine.js"></script>

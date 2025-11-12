@@ -8,7 +8,8 @@ class QuizData {
             fundamentals: this.getFundamentalsQuestions(),
             intermediate: this.getIntermediateQuestions(),
             advanced: this.getAdvancedQuestions(),
-            'software-dev': this.getSoftwareDevQuestions()
+            'software-dev': this.getSoftwareDevQuestions(),
+            'software-dev-python': this.getSoftwareDevPythonQuestions()
         };
     }
 
@@ -3112,6 +3113,15 @@ class QuizData {
             // Note: You can add more Software-Dev questions here
             // I've provided 45 sample questions to get you started
         ];
+    }
+
+    getSoftwareDevPythonQuestions() {
+        if (typeof SoftwareDevPythonQuestionBank !== 'undefined') {
+            return SoftwareDevPythonQuestionBank.getQuestions();
+        }
+        
+        console.warn('SoftwareDevPythonQuestionBank is not loaded. Returning empty question set.');
+        return [];
     }
 }
 
