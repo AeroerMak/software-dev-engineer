@@ -352,6 +352,113 @@
                     </div>
                 </div>
 
+                <!-- Project 05: Personal Portfolio Website -->
+                <div class="project-showcase glow-card">
+                    <div class="project-visual">
+                        <div class="project-demo portfolio-demo">
+                            <div class="demo-header">
+                                <i class="fas fa-user-tie"></i>
+                                <span>Portfolio Showcase</span>
+                            </div>
+                            <div class="portfolio-preview">
+                                <div class="preview-card">
+                                    <h4>Craft your signature story</h4>
+                                    <p>Full-width hero, timeline, and highlights.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-badge">
+                            <i class="fas fa-id-card"></i>
+                            <span>Project 05</span>
+                        </div>
+                        <h3>Personal Portfolio Website</h3>
+                        <p>Design a responsive portfolio with hero, featured projects, testimonials, and resume download. Focus on reusable components that keep your story and skills in the spotlight.</p>
+                        <div class="project-code">
+                            <div class="code-snippet">
+                                <pre><code><span class="code-comment">// Hero section markup</span>
+<span class="code-keyword">const</span> <span class="code-var">hero</span> = <span class="code-keyword">document</span>.<span class="code-method">querySelector</span>('.hero');
+<span class="code-var">hero</span>.<span class="code-method">innerHTML</span> = `
+  <section class="hero-grid">
+    <h1>Hi, I&apos;m Developer.</h1>
+    <p>I build intentional digital experiences.</p>
+  </section>`;</code></pre>
+                            </div>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill"><i class="fab fa-html5"></i> HTML5</span>
+                            <span class="tech-pill"><i class="fab fa-css3-alt"></i> CSS Grid</span>
+                            <span class="tech-pill"><i class="fab fa-js"></i> JavaScript</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" target="_blank" class="project-btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live Project</span>
+                            </a>
+                            <a href="https://github.com/Coder-Connections/Personal-Portfolio" target="_blank" class="project-btn btn-secondary">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 06: Coding Projects Documentation -->
+                <div class="project-showcase glow-card">
+                    <div class="project-visual">
+                        <div class="project-demo docs-demo">
+                            <div class="demo-header">
+                                <i class="fas fa-book-open"></i>
+                                <span>Docs & Blogging</span>
+                            </div>
+                            <div class="docs-preview">
+                                <div class="docs-entry">
+                                    <span class="badge">Guide</span>
+                                    <h5>Explain every build</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-badge">
+                            <i class="fas fa-blog"></i>
+                            <span>Project 06</span>
+                        </div>
+                        <h3>Coding Projects Documentation</h3>
+                        <p>Create a blogging-style documentation site where each build gets a narrative, deep-dive article, code snippet, and downloadable artifact.</p>
+                        <div class="project-code">
+                            <div class="code-snippet">
+                                <pre><code><span class="code-comment">// Render documentation cards</span>
+<span class="code-keyword">fetch</span>('/data/posts.json')
+  .<span class="code-method">then</span>(res => res.<span class="code-method">json</span>())
+  .<span class="code-method">then</span>(posts => {
+    <span class="code-var">postList</span>.<span class="code-method">innerHTML</span> = posts.<span class="code-method">map</span>(post => `
+      <article class="post-card">
+        <h4>${post.title}</h4>
+        <p>${post.excerpt}</p>
+      </article>
+    `).<span class="code-method">join</span>('');
+  });</code></pre>
+                            </div>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill"><i class="fas fa-pen-nib"></i> Writing</span>
+                            <span class="tech-pill"><i class="fab fa-markdown"></i> Markdown</span>
+                            <span class="tech-pill"><i class="fas fa-server"></i> Static Site</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" target="_blank" class="project-btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live Project</span>
+                            </a>
+                            <a href="https://github.com/Coder-Connections/Codinglog" target="_blank" class="project-btn btn-secondary">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>

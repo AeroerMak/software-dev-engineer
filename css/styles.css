@@ -1342,6 +1342,56 @@ section {
     color: var(--accent-blue);
 }
 
+/* Custom previews for new project demos */
+.portfolio-preview,
+.docs-preview {
+    padding: var(--space-4);
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top center, rgba(88, 166, 255, 0.08), rgba(1, 4, 9, 0.9));
+    border-top: 1px solid var(--border-default);
+    border-radius: 0 0 12px 12px;
+}
+
+.preview-card,
+.docs-entry {
+    width: 100%;
+    background: rgba(3, 7, 12, 0.9);
+    border: 1px solid rgba(88, 166, 255, 0.2);
+    border-radius: 12px;
+    padding: var(--space-3);
+    box-shadow: 0 12px 30px rgba(1, 4, 9, 0.6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.preview-card h4,
+.docs-entry h5 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.preview-card p,
+.docs-entry p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.docs-entry .badge {
+    align-self: flex-start;
+    background: var(--accent-blue);
+    color: #fff;
+    border-radius: 999px;
+    padding: 2px 10px;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
 /* Chat Demo Styles */
 .chat-messages {
     padding: var(--space-4);
