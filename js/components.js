@@ -140,7 +140,7 @@ class ComponentSystem {
                             <li><a href="modules.html#module-03"><i class="fas fa-chevron-right"></i> Module 03: JavaScript Essentials</a></li>
                             <li><a href="modules.html#module-04"><i class="fas fa-chevron-right"></i> Module 04: React.js Development</a></li>
                             <li><a href="modules.html#module-05"><i class="fas fa-chevron-right"></i> Module 05: Python Programming Fundamentals</a></li>
-                            <li><a href="modules.html#module-06"><i class="fas fa-chevron-right"></i> Module 06: Animation using Python (Manim)</a></li>
+                            <li><a href="modules.html#module-06"><i class="fas fa-chevron-right"></i> Module 06: API Introduction & Testing with Postman</a></li>
                         </ul>
                     </div>
 

@@ -161,8 +161,8 @@ const DevLearnConfig = {
             },
             {
                 id: "module-06",
-                title: "Animation using Python (Manim)",
-                icon: "fas fa-play-circle"
+                title: "API Introduction & Testing with Postman",
+                icon: "fas fa-plug"
             }
         ],
         advanced: [
