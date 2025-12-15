@@ -55,6 +55,7 @@ class ComponentSystem {
                         <li><a href="webapp.html" class="nav-link ${this.getCurrentPage() === 'webapp' ? 'active' : ''}">
                             <i class="fas fa-desktop"></i>
                             <span>WebApp</span>
+                            <i class="fas fa-lock" style="margin-left: 5px; font-size: 0.75em; opacity: 0.7;"></i>
                         </a></li>
                         <li><a href="assignments.html" class="nav-link ${this.getCurrentPage() === 'assignments' ? 'active' : ''}">
                             <i class="fas fa-clipboard-check"></i>
@@ -63,6 +64,7 @@ class ComponentSystem {
                         <li><a href="quiz.html" class="nav-link ${this.getCurrentPage() === 'quiz' ? 'active' : ''}">
                             <i class="fas fa-database"></i>
                             <span>Exam</span>
+                            <i class="fas fa-lock" style="margin-left: 5px; font-size: 0.75em; opacity: 0.7;"></i>
                         </a></li>
                     </ul>
                     <a href="practice.html" class="btn-nav-cta">

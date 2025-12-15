@@ -159,14 +159,80 @@ class QuizEngine {
         // Update progress
         this.updateProgress();
         
-        // Display question text
-        document.getElementById('questionText').textContent = question.question;
-        
         // Display question image if available
         const questionImage = document.getElementById('questionImage');
         const questionCode = document.getElementById('questionCode');
+        const questionTable = document.getElementById('questionTable');
+        const questionText = document.getElementById('questionText');
         
-        if (question.image) {
+        // Parse question text for code blocks (markdown style: ```python ... ```)
+        const questionTextWithCode = question.question;
+        const codeBlockRegex = /```(\w+)?\n([\s\S]*?)```/g;
+        let match;
+        let lastIndex = 0;
+        let questionHTML = '';
+        let hasCodeBlock = false;
+        let codeContent = '';
+        let codeLanguage = 'python';
+        
+        // Check if question contains code blocks
+        while ((match = codeBlockRegex.exec(questionTextWithCode)) !== null) {
+            // Add text before code block
+            questionHTML += this.escapeHtml(questionTextWithCode.substring(lastIndex, match.index));
+            
+            // Extract code block
+            codeLanguage = match[1] || 'python';
+            codeContent = match[2];
+            hasCodeBlock = true;
+            
+            lastIndex = match.index + match[0].length;
+        }
+        
+        // Add remaining text after last code block
+        if (lastIndex < questionTextWithCode.length) {
+            questionHTML += this.escapeHtml(questionTextWithCode.substring(lastIndex));
+        }
+        
+        // If no code blocks found, use original text
+        if (!hasCodeBlock) {
+            questionHTML = this.escapeHtml(questionTextWithCode);
+        }
+        
+        // Display question text (with code blocks removed)
+        questionText.innerHTML = questionHTML;
+        
+        // Display database table if available
+        if (question.table && questionTable) {
+            this.renderTable(question.table, questionTable);
+            questionTable.style.display = 'block';
+            questionImage.style.display = 'none';
+            questionImage.innerHTML = '';
+            if (questionCode) {
+                questionCode.style.display = 'none';
+                questionCode.innerHTML = '';
+            }
+        }
+        // Display code block if found
+        else if (hasCodeBlock && questionCode) {
+            const pre = document.createElement('pre');
+            pre.className = 'question-code-block';
+            
+            const codeElement = document.createElement('code');
+            codeElement.textContent = codeContent.trim();
+            codeElement.setAttribute('data-language', codeLanguage);
+            
+            pre.appendChild(codeElement);
+            
+            questionCode.innerHTML = '';
+            questionCode.appendChild(pre);
+            questionCode.style.display = 'block';
+            questionImage.style.display = 'none';
+            questionImage.innerHTML = '';
+            if (questionTable) {
+                questionTable.style.display = 'none';
+                questionTable.innerHTML = '';
+            }
+        } else if (question.image) {
             questionImage.innerHTML = `<img src="${question.image}" alt="Question illustration" style="max-width: 100%; height: auto;">`;
             questionImage.style.display = 'block';
             if (questionCode) {
@@ -193,6 +259,10 @@ class QuizEngine {
             if (questionCode) {
                 questionCode.style.display = 'none';
                 questionCode.innerHTML = '';
+            }
+            if (questionTable) {
+                questionTable.style.display = 'none';
+                questionTable.innerHTML = '';
             }
         }
         
@@ -495,6 +565,77 @@ class QuizEngine {
         if (this.currentLevel) {
             this.startQuiz(this.currentLevel);
         }
+    }
+
+    // ===================================
+    // Utility Methods
+    // ===================================
+    
+    escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+
+    renderTable(tableData, container) {
+        if (!tableData || !container) return;
+
+        const { name, columns, rows } = tableData;
+
+        // Create table name header
+        const tableName = document.createElement('div');
+        tableName.className = 'question-table-name';
+        tableName.textContent = name || 'TABLE';
+
+        // Create table element
+        const table = document.createElement('table');
+        table.className = 'question-table';
+
+        // Create header
+        const thead = document.createElement('thead');
+        const headerRow = document.createElement('tr');
+        
+        columns.forEach(column => {
+            const th = document.createElement('th');
+            th.textContent = column;
+            headerRow.appendChild(th);
+        });
+        
+        thead.appendChild(headerRow);
+        table.appendChild(thead);
+
+        // Create body with rows
+        const tbody = document.createElement('tbody');
+        
+        if (rows && rows.length > 0) {
+            rows.forEach(row => {
+                const tr = document.createElement('tr');
+                row.forEach(cell => {
+                    const td = document.createElement('td');
+                    td.textContent = cell;
+                    tr.appendChild(td);
+                });
+                tbody.appendChild(tr);
+            });
+        } else {
+            // If no rows provided, show column headers only
+            const tr = document.createElement('tr');
+            columns.forEach(() => {
+                const td = document.createElement('td');
+                td.textContent = '—';
+                td.style.color = 'var(--text-muted)';
+                td.style.fontStyle = 'italic';
+                tr.appendChild(td);
+            });
+            tbody.appendChild(tr);
+        }
+        
+        table.appendChild(tbody);
+
+        // Clear container and append
+        container.innerHTML = '';
+        container.appendChild(tableName);
+        container.appendChild(table);
     }
 
     viewExplanations() {

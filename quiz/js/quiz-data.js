@@ -9,7 +9,8 @@ class QuizData {
             intermediate: this.getIntermediateQuestions(),
             advanced: this.getAdvancedQuestions(),
             'software-dev': this.getSoftwareDevQuestions(),
-            'software-dev-python': this.getSoftwareDevPythonQuestions()
+            'software-dev-python': this.getSoftwareDevPythonQuestions(),
+            'software-dev-python-level2': this.getSoftwareDevPythonLevel2Questions()
         };
     }
 
@@ -3121,6 +3122,15 @@ class QuizData {
         }
         
         console.warn('SoftwareDevPythonQuestionBank is not loaded. Returning empty question set.');
+        return [];
+    }
+
+    getSoftwareDevPythonLevel2Questions() {
+        if (typeof SoftwareDevPythonLevel2QuestionBank !== 'undefined') {
+            return SoftwareDevPythonLevel2QuestionBank.getQuestions();
+        }
+        
+        console.warn('SoftwareDevPythonLevel2QuestionBank is not loaded. Returning empty question set.');
         return [];
     }
 }

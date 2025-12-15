@@ -205,7 +205,7 @@
                             </div>
                             <div class="stat">
                                 <i class="fas fa-star"></i>
-                                <span>Foundation</span>
+                                <span>Level 1</span>
                             </div>
                         </div>
                         <div class="level-topics">
@@ -216,6 +216,41 @@
                         </div>
                         <button class="btn btn-primary start-quiz-btn" data-level="software-dev-python">
                             <i class="fas fa-play"></i> Start Python Foundation Quiz
+                        </button>
+                    </div>
+
+                    <!-- Software Development Skills Foundation (Python) Level 2 -->
+                    <div class="quiz-level-card glow-card" data-level="software-dev-python-level2">
+                        <div class="level-header">
+                            <div class="level-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="level-badge">Level 2</div>
+                        </div>
+                        <h3>Software Development Skills Foundation (Python)</h3>
+                        <p>Advance your Python skills with intermediate-level questions covering advanced language features, design patterns, and real-world development scenarios.</p>
+                        <div class="level-stats">
+                            <div class="stat">
+                                <i class="fas fa-question-circle"></i>
+                                <span id="python-level2-count">0</span> Questions
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-clock"></i>
+                                <span>~30 minutes</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-star"></i>
+                                <span>Intermediate</span>
+                            </div>
+                        </div>
+                        <div class="level-topics">
+                            <span class="topic-tag">Advanced Python</span>
+                            <span class="topic-tag">Design Patterns</span>
+                            <span class="topic-tag">Best Practices</span>
+                            <span class="topic-tag">Real-World Scenarios</span>
+                        </div>
+                        <button class="btn btn-primary start-quiz-btn" data-level="software-dev-python-level2">
+                            <i class="fas fa-play"></i> Start Python Level 2 Quiz
                         </button>
                     </div>
                 </div>
@@ -229,7 +264,7 @@
                     </div>
                     <div class="stat-item">
                         <i class="fas fa-users"></i>
-                        <span class="stat-count">5</span>
+                        <span class="stat-count">6</span>
                         <span class="stat-text">Quiz Categories</span>
                     </div>
                     <div class="stat-item">
@@ -260,6 +295,13 @@
                     </div>
                 </div>
                 <div class="quiz-actions">
+                    <div class="user-info" style="display: flex; align-items: center; margin-right: 10px; color: #fff;">
+                        <i class="fas fa-user-circle" style="margin-right: 5px;"></i>
+                        <span id="userEmail" style="font-size: 0.9em;"></span>
+                    </div>
+                    <button class="btn btn-secondary" id="logoutBtn" title="Logout">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </button>
                     <button class="btn btn-secondary" id="pauseQuiz">
                         <i class="fas fa-pause"></i> Pause
                     </button>
@@ -293,6 +335,9 @@
                         </div>
                         <div class="question-code" id="questionCode" style="display: none;">
                             <!-- Code examples will be rendered here -->
+                        </div>
+                        <div class="question-table-container" id="questionTable" style="display: none;">
+                            <!-- Database tables will be rendered here -->
                         </div>
                     </div>
 
@@ -432,12 +477,47 @@
 
     <!-- Scripts -->
     <script src="js/config.js"></script>
+    <script src="js/auth.js"></script>
     <script src="js/components.js"></script>
     <script src="js/script.js"></script>
     <script src="quiz/js/quiz-software-dev-python.js"></script>
+    <script src="quiz/js/quiz-software-dev-python-level2.js"></script>
     <script src="quiz/js/quiz-data.js"></script>
     <script src="quiz/js/quiz-scoring.js"></script>
     <script src="quiz/js/quiz-engine.js"></script>
+    
+    <!-- Authentication Protection -->
+    <script>
+        // Protect quiz page - redirect to login if not authenticated
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof DevLearnAuth !== 'undefined') {
+                // Check authentication before allowing access
+                if (!DevLearnAuth.protectPage('login.html')) {
+                    return; // Redirect will happen in protectPage
+                }
+                
+                // Display user info if needed
+                DevLearnAuth.displayUserInfo('userEmail');
+                
+                // Setup logout button if exists
+                DevLearnAuth.setupLogoutButton('logoutBtn', 'login.html');
+            }
+        });
+    </script>
+    
+    <!-- Update question count for Python Level 2 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof QuizData !== 'undefined') {
+                const quizData = new QuizData();
+                const questions = quizData.getQuestions('software-dev-python-level2');
+                const countElement = document.getElementById('python-level2-count');
+                if (countElement && questions) {
+                    countElement.textContent = questions.length;
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>

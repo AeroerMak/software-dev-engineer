@@ -11,7 +11,22 @@ const VALID_CREDENTIALS = {
 // Check if already logged in
 function checkExistingSession() {
     if (localStorage.getItem('devlearn_auth_token')) {
-        window.location.href = 'webapp.html';
+        // Check if session is still valid
+        const loginTime = localStorage.getItem('devlearn_login_time');
+        if (loginTime) {
+            const loginDate = new Date(loginTime);
+            const currentDate = new Date();
+            const hoursSinceLogin = (currentDate - loginDate) / (1000 * 60 * 60);
+            // Session timeout is 24 hours
+            if (hoursSinceLogin < 24) {
+                window.location.href = 'quiz.html';
+            } else {
+                // Session expired, clear it
+                localStorage.removeItem('devlearn_auth_token');
+                localStorage.removeItem('devlearn_user_email');
+                localStorage.removeItem('devlearn_login_time');
+            }
+        }
     }
 }
 
@@ -84,9 +99,9 @@ function handleSuccessfulLogin(username, remember, messageEl, messageText) {
     messageEl.querySelector('i').style.color = '#3fb950';
     messageText.textContent = 'Login successful! Redirecting...';
     
-    // Redirect to webapp after 1 second
+    // Redirect to quiz page after 1 second
     setTimeout(() => {
-        window.location.href = 'webapp.html';
+        window.location.href = 'quiz.html';
     }, 1000);
 }
 
