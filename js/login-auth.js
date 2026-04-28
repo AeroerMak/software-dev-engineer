@@ -4,8 +4,8 @@
 
 // Hardcoded credentials
 const VALID_CREDENTIALS = {
-    username: 'Maset',
-    password: 'coding-web'
+    username: 'Admin',
+    password: '++1234'
 };
 
 // Check if already logged in
